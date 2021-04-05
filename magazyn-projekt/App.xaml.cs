@@ -13,5 +13,6 @@ namespace magazyn_projekt
     /// </summary>
     public partial class App : Application
     {
+
     }
 }
