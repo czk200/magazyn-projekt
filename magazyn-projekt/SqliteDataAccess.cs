@@ -26,11 +26,6 @@ namespace magazyn_projekt
             }
            
         }
-        public static void saveUser(userModel user)
-        {
-            
-
-        }
         private static string loadConnectionString(string pepega = "trololo")
         {
             return ConfigurationManager.ConnectionStrings[pepega].ConnectionString;

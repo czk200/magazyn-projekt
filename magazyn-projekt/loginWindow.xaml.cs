@@ -20,6 +20,7 @@ namespace magazyn_projekt
     /// </summary>
     public partial class loginWindow : Window
     {
+        int statusLevel;
         public loginWindow()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace magazyn_projekt
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+             
             string allegedId = loginBox.Text;
             users = SqliteDataAccess.loadUsers();
             int index = users.FindIndex(users => users.userid == allegedId);
@@ -34,9 +36,9 @@ namespace magazyn_projekt
             {
                 if (passwordBox.Text == users[index].password)
                 {
+                    statusLevel = users[index].status;
                     MainWindow mW = new MainWindow();
                     this.Hide();
-
                     mW.Show();
                     mW.Focus();
                 }
