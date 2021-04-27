@@ -17,9 +17,9 @@ namespace magazyn_projekt
     /// <summary>
     /// Logika interakcji dla klasy menageUsers.xaml
     /// </summary>
-    public partial class menageUsers : Window
+    public partial class ManageProducts: Window
     {
-        public menageUsers()
+        public ManageProducts()
         {
             InitializeComponent();
         }

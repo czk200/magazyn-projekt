@@ -27,11 +27,11 @@ namespace magazyn_projekt
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-             
+        {       
             string allegedId = loginBox.Text;
             users = SqliteDataAccess.loadUsers();
             int index = users.FindIndex(users => users.userid == allegedId);
+
             if (index != -1)
             {
                 if (passwordBox.Text == users[index].password)

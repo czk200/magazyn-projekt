@@ -4,25 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\
+C:\Users\dbierna\source\repos\czk200\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\
 magazyn_projekt
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\App.xaml
-<<<<<<< Updated upstream
-11407045341
+C:\Users\dbierna\source\repos\czk200\magazyn-projekt\magazyn-projekt\App.xaml
+4-1673725899
 
-5-1002969092
-198-4597448
-MainWindow.xaml;
-=======
-3-202544803
+10845407399
+199-856704301
+loginWindow.xaml;MainWindow.xaml;ManageProducts.xaml;ManageUsers.xaml;
 
-9-1575891594
-1991863563797
-loginWindow.xaml;MainWindow.xaml;menageUsers.xaml;
->>>>>>> Stashed changes
-
-False
+True
 

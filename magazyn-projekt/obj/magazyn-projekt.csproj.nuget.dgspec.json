@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\naall\\source\\repos\\magazyn-projekt\\magazyn-projekt\\magazyn-projekt.csproj": {}
+    "C:\\Users\\dbierna\\source\\repos\\czk200\\magazyn-projekt\\magazyn-projekt\\magazyn-projekt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\naall\\source\\repos\\magazyn-projekt\\magazyn-projekt\\magazyn-projekt.csproj": {
+    "C:\\Users\\dbierna\\source\\repos\\czk200\\magazyn-projekt\\magazyn-projekt\\magazyn-projekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\naall\\source\\repos\\magazyn-projekt\\magazyn-projekt\\magazyn-projekt.csproj",
+        "projectUniqueName": "C:\\Users\\dbierna\\source\\repos\\czk200\\magazyn-projekt\\magazyn-projekt\\magazyn-projekt.csproj",
         "projectName": "magazyn-projekt",
-        "projectPath": "C:\\Users\\naall\\source\\repos\\magazyn-projekt\\magazyn-projekt\\magazyn-projekt.csproj",
-        "packagesPath": "C:\\Users\\naall\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\naall\\source\\repos\\magazyn-projekt\\magazyn-projekt\\obj\\",
+        "projectPath": "C:\\Users\\dbierna\\source\\repos\\czk200\\magazyn-projekt\\magazyn-projekt\\magazyn-projekt.csproj",
+        "packagesPath": "C:\\Users\\dbierna\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dbierna\\source\\repos\\czk200\\magazyn-projekt\\magazyn-projekt\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\naall\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\dbierna\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

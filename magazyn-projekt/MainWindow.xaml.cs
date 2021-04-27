@@ -27,7 +27,20 @@ namespace magazyn_projekt
 
         private void addUserButtonClick(object sender, RoutedEventArgs e)
         {
-            
+
+        }
+        private void deleteUserButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void setPermissionButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+        
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

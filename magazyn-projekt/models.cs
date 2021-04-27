@@ -12,6 +12,5 @@ namespace magazyn_projekt
         public int status { get; set; }
         public string userid { get; set; }
         public string password { get; set; }
-
     }
 }
