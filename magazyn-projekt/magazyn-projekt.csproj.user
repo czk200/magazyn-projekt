@@ -7,7 +7,24 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
+=======
+    <Compile Update="loginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="menageUsers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="loginWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+>>>>>>> Stashed changes
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="menageUsers.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -10,24 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using static System.Windows.Controls.Menu;
+
 namespace magazyn_projekt
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logika interakcji dla klasy menageUsers.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class menageUsers : Window
     {
-        public MainWindow()
+        public menageUsers()
         {
             InitializeComponent();
         }
 
-        private void addUserButtonClick(object sender, RoutedEventArgs e)
+        private void backButtonClick(object sender, RoutedEventArgs e)
         {
-            
+
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
