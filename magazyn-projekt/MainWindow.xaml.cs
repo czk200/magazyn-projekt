@@ -27,7 +27,10 @@ namespace magazyn_projekt
 
         private void addUserButtonClick(object sender, RoutedEventArgs e)
         {
-
+            ManageUsers mW = new ManageUsers();
+            this.Hide();
+            mW.Show();
+            mW.Focus();
         }
         private void deleteUserButtonClick(object sender, RoutedEventArgs e)
         {

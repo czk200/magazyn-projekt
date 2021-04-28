@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static magazyn_projekt.SqliteDataAccess;
 
 namespace magazyn_projekt
 {
@@ -22,11 +23,14 @@ namespace magazyn_projekt
         public ManageUsers()
         {
             InitializeComponent();
+            this.DataContext = users;
         }
-
         private void backButtonClick(object sender, RoutedEventArgs e)
         {
-
+            MainWindow mW = new MainWindow();
+            this.Hide();
+            mW.Show();
+            mW.Focus();
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

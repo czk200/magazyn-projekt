@@ -94,3 +94,7 @@ C:\Users\dbierna\source\repos\czk200\magazyn-projekt\magazyn-projekt\obj\Debug\n
 C:\Users\dbierna\source\repos\czk200\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\ManageUsers.g.cs
 C:\Users\dbierna\source\repos\czk200\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\ManageProducts.baml
 C:\Users\dbierna\source\repos\czk200\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\ManageUsers.baml
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\ManageProducts.g.cs
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\ManageUsers.g.cs
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\ManageProducts.baml
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\ManageUsers.baml
