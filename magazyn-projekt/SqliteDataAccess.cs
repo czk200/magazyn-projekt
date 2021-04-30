@@ -17,6 +17,7 @@ namespace magazyn_projekt
     public class SqliteDataAccess
     {
         public static List<userModel> users;
+        public static List<itemModel> items;
         public static List<userModel> loadUsers()
         {
             using (IDbConnection cnn = new SQLiteConnection(loadConnectionString()))
@@ -26,6 +27,16 @@ namespace magazyn_projekt
             }
            
         }
+        public static List<itemModel> loadItems()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(loadConnectionString()))
+            {
+                var output = cnn.Query<itemModel>("select * from items", new DynamicParameters());
+                return output.ToList();
+            }
+
+        }
+
         private static string loadConnectionString(string pepega = "trololo")
         {
             return ConfigurationManager.ConnectionStrings[pepega].ConnectionString;

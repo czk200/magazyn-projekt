@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static System.Windows.Controls.Menu;
+using static magazyn_projekt.SqliteDataAccess;
 namespace magazyn_projekt
 {
     /// <summary>
@@ -23,6 +24,7 @@ namespace magazyn_projekt
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void addUserButtonClick(object sender, RoutedEventArgs e)
@@ -44,6 +46,10 @@ namespace magazyn_projekt
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
         }
     }
 }

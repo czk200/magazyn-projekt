@@ -30,6 +30,7 @@ namespace magazyn_projekt
         {       
             string allegedId = loginBox.Text;
             users = SqliteDataAccess.loadUsers();
+            items = SqliteDataAccess.loadItems();
             int index = users.FindIndex(users => users.userid == allegedId);
 
             if (index != -1)

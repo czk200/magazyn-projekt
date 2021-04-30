@@ -7,12 +7,43 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="766" Width="1366">
     <Grid>
-        <Menu Height="16" Name="menu1" Width="800" HorizontalAlignment="Left" VerticalAlignment="Top" Background="LightGray">
+        <Menu Height="16" Name="menu1" Width="1377" HorizontalAlignment="Left" VerticalAlignment="Top" Background="LightGray">
             <MenuItem Header="Users" Click="MenuItem_Click">
                 <MenuItem Header="Add" Name="addUserButton" Click="addUserButtonClick"/>
                 <MenuItem Header="Delete" Name="deleteUserButton" Click="deleteUserButtonClick"/>
                 <MenuItem Header="Set Permissions" Name="setPermissionButton" Click="setPermissionButtonClick"/>
             </MenuItem>
         </Menu>
+        <ListView x:Name="listview1" Background="AliceBlue" Margin="430,110,31,0" SelectionChanged="ListView_SelectionChanged" ItemsSource="{Binding users, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="150">
+                        <TextBox Text="{Binding Path=idTow}"/>
+                    </GridViewColumn>
+                    <GridViewColumn Width="150">
+                        <TextBox Text="{Binding Path=idDos}"/>
+                    </GridViewColumn>
+                    <GridViewColumn Width="150">
+                        <TextBox Text="{Binding Path=nazwaTow}"/>
+                    </GridViewColumn>
+                    <GridViewColumn Width="150">
+                        <TextBox Text="{Binding Path=ilosc}"/>
+                    </GridViewColumn>
+                    <GridViewColumn Width="150">
+                        <TextBox Text="{Binding Path=cenaZak}"/>
+                    </GridViewColumn>
+                    <GridViewColumn Width="150">
+                        <TextBox Text="{Binding Path=cenaSprz}"/>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="430,84,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="585,84,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="735,84,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="885,84,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="1035,84,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="1185,84,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center"/>
+
     </Grid>
 </Window>

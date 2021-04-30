@@ -13,4 +13,15 @@ namespace magazyn_projekt
         public string userid { get; set; }
         public string password { get; set; }
     }
+
+    public class itemModel
+    {
+        public int idTow { get; set; }
+        public int idDos { get; set; }
+        public string nazwaTow { get; set; }
+        public int ilosc { get; set; }
+        public float cenaZak { get; set; }
+        public float cenaSprz { get; set; }
+    }
+
 }
