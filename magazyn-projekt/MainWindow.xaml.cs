@@ -24,6 +24,8 @@ namespace magazyn_projekt
         public MainWindow()
         {
             InitializeComponent();
+            items = SqliteDataAccess.loadItems();
+            dataGrid1.ItemsSource = items;
 
         }
 
@@ -50,6 +52,11 @@ namespace magazyn_projekt
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+        }
+
+        private void dataGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

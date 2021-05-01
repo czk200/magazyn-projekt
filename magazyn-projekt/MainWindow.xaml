@@ -14,36 +14,16 @@
                 <MenuItem Header="Set Permissions" Name="setPermissionButton" Click="setPermissionButtonClick"/>
             </MenuItem>
         </Menu>
-        <ListView x:Name="listview1" Background="AliceBlue" Margin="430,110,31,0" SelectionChanged="ListView_SelectionChanged" ItemsSource="{Binding users, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Width="150">
-                        <TextBox Text="{Binding Path=idTow}"/>
-                    </GridViewColumn>
-                    <GridViewColumn Width="150">
-                        <TextBox Text="{Binding Path=idDos}"/>
-                    </GridViewColumn>
-                    <GridViewColumn Width="150">
-                        <TextBox Text="{Binding Path=nazwaTow}"/>
-                    </GridViewColumn>
-                    <GridViewColumn Width="150">
-                        <TextBox Text="{Binding Path=ilosc}"/>
-                    </GridViewColumn>
-                    <GridViewColumn Width="150">
-                        <TextBox Text="{Binding Path=cenaZak}"/>
-                    </GridViewColumn>
-                    <GridViewColumn Width="150">
-                        <TextBox Text="{Binding Path=cenaSprz}"/>
-                    </GridViewColumn>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="430,84,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="585,84,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="735,84,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="885,84,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="1035,84,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="1185,84,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center"/>
+        <DataGrid x:Name="dataGrid1" Background="White" Margin="564,21,10,10" DataContext="{Binding Source=items}" ItemsSource="{Binding Source=items}" SelectionChanged="dataGrid1_SelectionChanged" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id towaru" Binding="{Binding idTow}" Width="125"/>
+                <DataGridTextColumn Header="id dostawcy" Binding="{Binding idDos} " Width="125"/>
+                <DataGridTextColumn Header="nazwa towaru" Binding="{Binding nazwaTow}" Width="125"/>
+                <DataGridTextColumn Header="ilosc" Binding="{Binding ilosc}" Width="125"/>
+                <DataGridTextColumn Header="cena zakupu" Binding="{Binding cenaZak}" Width="125"/>
+                <DataGridTextColumn Header="cena sprzedarzy" Binding="{Binding cenaSprz}" Width="125"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>

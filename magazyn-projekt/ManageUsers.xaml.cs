@@ -24,6 +24,7 @@ namespace magazyn_projekt
         {
             InitializeComponent();
             this.DataContext = users;
+
         }
         private void backButtonClick(object sender, RoutedEventArgs e)
         {
