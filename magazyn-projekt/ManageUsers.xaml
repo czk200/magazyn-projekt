@@ -5,13 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="ManageUsers" Height="766" Width="1366">
-    <Grid>
-        <Button Content="back" HorizontalAlignment="Left" Margin="27,28,0,0" VerticalAlignment="Top" Name="backButton" Click="backButtonClick" Height="28" Width="484"/>
-        <ListBox Background="Gray" Width="800" Height="650" Margin="540,28,26,622" SelectionChanged="ListBox_SelectionChanged" Name="listBox1" ItemsSource="{Binding users}">
-            <TextBox Text="{Binding Path=userid}"/>
-            <TextBox Text="{Binding Path=status}"/>
-        </ListBox>
-                 
+        Title="ManageUsers" Height="579" Width="949">
+    <Grid Margin="0,0,221,0">
+        <Button Content="back to menu" HorizontalAlignment="Left" Margin="27,28,0,0" VerticalAlignment="Top" Name="backButton" Click="backButtonClick" Height="28" Width="484"/>
+        <DataGrid x:Name="dataGrid1" Background="White"  DataContext="{Binding Source=observableUsers}" ItemsSource="{Binding Source=users}" SelectionChanged="dataGrid1_SelectionChanged" AutoGenerateColumns="False" Margin="559,29,-212,25">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header=" id" Binding="{Binding id}" Width="125"/>
+                <DataGridTextColumn Header="user status" Binding="{Binding status}" Width="125"/>
+                <DataGridTextColumn Header="login" Binding="{Binding userid}" Width="125"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="addUserButton" Content="Add User" HorizontalAlignment="Left" Margin="27,73,0,0" VerticalAlignment="Top" Height="28" Width="484" Click="addButton_Click"/>
+        <Button x:Name="removeButton" Content="Remove User" HorizontalAlignment="Left" Margin="27,118,0,0" VerticalAlignment="Top" Width="484" Click="removeButton_Click" Height="28"/>
+        <Button x:Name="editUserButton" Content="Edit User" HorizontalAlignment="Left" Margin="27,170,0,0" VerticalAlignment="Top" Height="28" Width="484" Click="editUserButton_Click"/>
+
     </Grid>
 </Window>

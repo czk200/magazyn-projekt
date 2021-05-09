@@ -9,21 +9,22 @@
     <Grid>
         <Menu Height="16" Name="menu1" Width="1377" HorizontalAlignment="Left" VerticalAlignment="Top" Background="LightGray">
             <MenuItem Header="Users" Click="MenuItem_Click">
-                <MenuItem Header="Add" Name="addUserButton" Click="addUserButtonClick"/>
-                <MenuItem Header="Delete" Name="deleteUserButton" Click="deleteUserButtonClick"/>
-                <MenuItem Header="Set Permissions" Name="setPermissionButton" Click="setPermissionButtonClick"/>
+                <MenuItem Header="Manage Users" Name="addUserButton" Click="addUserButtonClick"/>
             </MenuItem>
         </Menu>
-        <DataGrid x:Name="dataGrid1" Background="White" Margin="564,21,10,10" DataContext="{Binding Source=items}" ItemsSource="{Binding Source=items}" SelectionChanged="dataGrid1_SelectionChanged" AutoGenerateColumns="False">
+        <DataGrid x:Name="dataGrid1" Background="White" Margin="564,21,10,10" DataContext="{Binding Source=observableItems}" ItemsSource="{Binding Source=items}" SelectionChanged="dataGrid1_SelectionChanged" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="id towaru" Binding="{Binding idTow}" Width="125"/>
-                <DataGridTextColumn Header="id dostawcy" Binding="{Binding idDos} " Width="125"/>
+                <DataGridTextColumn Header="id dostawcy" Binding="{Binding idDos}" Width="125"/>
                 <DataGridTextColumn Header="nazwa towaru" Binding="{Binding nazwaTow}" Width="125"/>
                 <DataGridTextColumn Header="ilosc" Binding="{Binding ilosc}" Width="125"/>
                 <DataGridTextColumn Header="cena zakupu" Binding="{Binding cenaZak}" Width="125"/>
                 <DataGridTextColumn Header="cena sprzedarzy" Binding="{Binding cenaSprz}" Width="125"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="addItemButton" Content="Add Item" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Height="104" Width="549" Click="addItemButton_Click"/>
+        <Button x:Name="deleteItemButton" Content="Delete Item" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.05,-0.925" Height="107" Width="549"/>
+        <Button x:Name="editItemButton" Content="Edit Item" HorizontalAlignment="Left" Margin="10,274,0,0" VerticalAlignment="Top" Height="107" Width="549"/>
 
     </Grid>
 </Window>

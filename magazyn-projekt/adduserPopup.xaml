@@ -1,0 +1,19 @@
+﻿<Window x:Class="magazyn_projekt.adduserPopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:magazyn_projekt"
+        mc:Ignorable="d"
+        Title="adduserPopup" Height="247" Width="154">
+    <Grid>
+        <TextBox  Name="useridTextBox" HorizontalAlignment="Left" Margin="12,41,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="userpasswordTextBox" HorizontalAlignment="Left" Margin="12,90,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="userstatusTextBox" HorizontalAlignment="Left" Margin="12,139,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="login" HorizontalAlignment="Left" Margin="51,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="users password" HorizontalAlignment="Left" Margin="24,64,0,0" VerticalAlignment="Top"/>
+        <Label Content="user status" HorizontalAlignment="Left" Margin="39,113,0,0" VerticalAlignment="Top"/>
+        <Button Content="add user" HorizontalAlignment="Left" Margin="44,164,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button x:Name="cancelButton" Content="cancel" HorizontalAlignment="Left" Margin="47,201,0,0" VerticalAlignment="Top" Width="46" Click="cancelButton_Click"/>
+    </Grid>
+</Window>

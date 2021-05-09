@@ -9,7 +9,7 @@ namespace magazyn_projekt
     public class userModel
     {
         public int id { get; set; }
-        public int status { get; set; }
+        public string status { get; set; }
         public string userid { get; set; }
         public string password { get; set; }
     }

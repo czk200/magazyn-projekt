@@ -20,7 +20,7 @@ namespace magazyn_projekt
     /// </summary>
     public partial class loginWindow : Window
     {
-        int statusLevel;
+        string statusLevel;
         public loginWindow()
         {
             InitializeComponent();
@@ -30,6 +30,7 @@ namespace magazyn_projekt
         {       
             string allegedId = loginBox.Text;
             users = SqliteDataAccess.loadUsers();
+            items = SqliteDataAccess.loadItems();
             int index = users.FindIndex(users => users.userid == allegedId);
 
             if (index != -1)

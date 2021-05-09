@@ -14,6 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static System.Windows.Controls.Menu;
 using static magazyn_projekt.SqliteDataAccess;
+using System.Collections.ObjectModel;
+using System.Windows.Threading;
+
 namespace magazyn_projekt
 {
     /// <summary>
@@ -21,14 +24,15 @@ namespace magazyn_projekt
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DispatcherTimer timer1;
+        public static ObservableCollection<itemModel> obervableItems = new ObservableCollection<itemModel>(items);
         public MainWindow()
         {
             InitializeComponent();
-            items = SqliteDataAccess.loadItems();
-            dataGrid1.ItemsSource = items;
+            dataGrid1.ItemsSource = observableItems;
+            InitTimer();
 
         }
-
         private void addUserButtonClick(object sender, RoutedEventArgs e)
         {
             ManageUsers mW = new ManageUsers();
@@ -36,27 +40,35 @@ namespace magazyn_projekt
             mW.Show();
             mW.Focus();
         }
-        private void deleteUserButtonClick(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void setPermissionButtonClick(object sender, RoutedEventArgs e)
-        {
-
-        }
         
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
 
         }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-        }
-
         private void dataGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+        public void InitTimer()
+        {
+            timer1 = new DispatcherTimer();
+            timer1.Tick += new EventHandler(timer1_Tick);
+            TimeSpan ts = TimeSpan.FromMilliseconds(33);
+            timer1.Interval = ts;
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ObservableCollection<itemModel> observableItems = new ObservableCollection<itemModel>(items);
+            dataGrid1.ItemsSource = null;
+            dataGrid1.ItemsSource = observableItems;
+        }
+
+        private void addItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddItemPopup addItPop = new AddItemPopup();
+            addItPop.Show();
         }
     }
 }

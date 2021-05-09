@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\App.xaml
-358322495
+7-612039912
 
-7-1791731263
+11-1280403896
 1991863563797
-loginWindow.xaml;MainWindow.xaml;ManageUsers.xaml;
+AddItemPopup.xaml;adduserPopup.xaml;editUserPopup.xaml;loginWindow.xaml;MainWindow.xaml;ManageUsers.xaml;removeUserPopup.xaml;
 
 False
 

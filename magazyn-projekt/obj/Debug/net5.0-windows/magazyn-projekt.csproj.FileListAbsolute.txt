@@ -96,3 +96,11 @@ C:\Users\dbierna\source\repos\czk200\magazyn-projekt\magazyn-projekt\obj\Debug\n
 C:\Users\dbierna\source\repos\czk200\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\ManageUsers.baml
 C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\ManageUsers.g.cs
 C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\ManageUsers.baml
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\adduserPopup.g.cs
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\adduserPopup.baml
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\removeUserPopup.g.cs
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\removeUserPopup.baml
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\editUserPopup.g.cs
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\editUserPopup.baml
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\AddItemPopup.g.cs
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\AddItemPopup.baml

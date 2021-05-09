@@ -1,0 +1,24 @@
+﻿<Window x:Class="magazyn_projekt.AddItemPopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:magazyn_projekt"
+        mc:Ignorable="d"
+        Title="AddItemPopup" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="supplierIdTextBox" HorizontalAlignment="Left" Margin="169,29,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Supplier Id" HorizontalAlignment="Left" Margin="65,25,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="itemNameTextBox" HorizontalAlignment="Left" Margin="169,69,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="item Name" HorizontalAlignment="Left" Margin="65,65,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="itemQuantityTextBox" HorizontalAlignment="Left" Margin="169,111,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="quantity" HorizontalAlignment="Left" Margin="64,107,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="buyingPriceTextBox" HorizontalAlignment="Left" Margin="169,153,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.342,0.136"/>
+        <Label Content="buying price" HorizontalAlignment="Left" Margin="64,149,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="sellingPriceTextBox" HorizontalAlignment="Left" Margin="169,199,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="selling price" HorizontalAlignment="Left" Margin="64,195,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="addItemButton" Content="Button" HorizontalAlignment="Left" Margin="229,260,0,0" VerticalAlignment="Top" Click="addItemButton_Click"/>
+
+
+    </Grid>
+</Window>

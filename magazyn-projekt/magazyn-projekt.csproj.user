@@ -6,14 +6,35 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AddItemPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="adduserPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="editUserPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="loginWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ManageUsers.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="removeUserPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AddItemPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="adduserPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="editUserPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="loginWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -21,6 +42,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ManageUsers.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="removeUserPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
