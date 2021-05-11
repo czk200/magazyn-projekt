@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="loginWindow" Height="180" Width="160">
+        Title="loginWindow" Height="210" Width="160">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="160" />
@@ -16,6 +16,7 @@
             <RowDefinition Height="20"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
 
         <TextBox Grid.Row="0" Text="login" TextWrapping="Wrap" Name="loginBox"/>
@@ -23,6 +24,6 @@
         <TextBlock Grid.Row="2" Text="" TextWrapping="Wrap" FontSize="8" Name="loginInfo"/>
         <Button Grid.Row="3" Content="Login" Click="Button_Click"/>
         <Button Grid.Row="4" Content="Add customer" Click="ButtonAddCustomerClick"/>
-
+        <Button Grid.Row="5" Content="Exit" Click="ButtonExitClick"/>
     </Grid>
 </Window>

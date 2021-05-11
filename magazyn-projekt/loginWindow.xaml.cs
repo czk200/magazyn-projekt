@@ -58,5 +58,9 @@ namespace magazyn_projekt
             AddCustomerPopup window = new AddCustomerPopup();
             window.ShowDialog();
         }
+        private void ButtonExitClick(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
