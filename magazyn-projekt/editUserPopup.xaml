@@ -5,20 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="editUserPopup" Height="395" Width="812">
-    <Grid Margin="0,0,0,-6" HorizontalAlignment="Center" Width="812">
-        <Label Content="Edit user with id = " HorizontalAlignment="Left" Margin="28,62,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="editIdTextBox" HorizontalAlignment="Left" Margin="137,67,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="25"/>
-        <Label Content="Change login to" HorizontalAlignment="Left" Margin="181,61,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="editLoginTextBox" HorizontalAlignment="Left" Margin="281,63,0,295" Text="" TextWrapping="Wrap" Width="73" Height="25"/>
-        <Label Content="Change password to" HorizontalAlignment="Left" Margin="359,64,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="editPasswordTextBox" HorizontalAlignment="Left" Margin="482,64,0,293" Text="" TextWrapping="Wrap" Width="73" Height="25" />
-        <Label Content="Change status to" HorizontalAlignment="Left" Margin="560,66,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="editStatusTextBox" HorizontalAlignment="Left" Margin="664,67,0,290" Text="" TextWrapping="Wrap" Width="73" Height="25" />
-        <Button x:Name="editLoginButton" Content="Edit" HorizontalAlignment="Left" Margin="305,104,0,0" VerticalAlignment="Top" Click="editButton_Click"/>
-        <Button Content="back to menu" HorizontalAlignment="Left" Margin="101,31,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button x:Name="editPasswordButton" Content="edit" HorizontalAlignment="Left" Margin="482,99,0,0" VerticalAlignment="Top" Click="editPasswordButton_Click"/>
-        <Button x:Name="editStatusButton" Content="edit" HorizontalAlignment="Left" Margin="676,104,0,0" VerticalAlignment="Top" Click="editStatusButton_Click"/>
+        Title="editUserPopup" Height="125" Width="360">
+    <Grid HorizontalAlignment="Center" Width="360">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180" />
+            <ColumnDefinition Width="90" />
+            <ColumnDefinition Width="90" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Label Content="Edit user with id = " HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top"/>
+        <TextBox Grid.Column="1" x:Name="editIdTextBox" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Change login to" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="editLoginTextBox" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" Width="90" Height="25"/>
+        <Label Grid.Row="2" Grid.Column="0" Content="Change password to" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="editPasswordTextBox" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" Width="90" Height="25" />
+        <Label Grid.Row="3" Grid.Column="0" Content="Change status to" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="editStatusTextBox" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" Width="90" Height="25" />
+        <Button Grid.Row="1" Grid.Column="2" x:Name="editLoginButton" Content="Edit" HorizontalAlignment="Left" VerticalAlignment="Top" Click="editButton_Click" Width="90" Height="25"/>
+        <Button Grid.Row="0" Grid.Column="2" Content="back to menu" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click" Width="90" Height="25"/>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="editPasswordButton" Content="edit" HorizontalAlignment="Left" VerticalAlignment="Top" Click="editPasswordButton_Click" Width="90" Height="25"/>
+        <Button Grid.Row="3" Grid.Column="2" x:Name="editStatusButton" Content="edit" HorizontalAlignment="Left" VerticalAlignment="Top" Click="editStatusButton_Click" Width="90" Height="25"/>
 
     </Grid>
 </Window>

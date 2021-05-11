@@ -5,15 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="adduserPopup" Height="247" Width="154">
-    <Grid>
-        <TextBox  Name="useridTextBox" HorizontalAlignment="Left" Margin="12,41,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="userpasswordTextBox" HorizontalAlignment="Left" Margin="12,90,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="userstatusTextBox" HorizontalAlignment="Left" Margin="12,139,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="login" HorizontalAlignment="Left" Margin="51,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="users password" HorizontalAlignment="Left" Margin="24,64,0,0" VerticalAlignment="Top"/>
-        <Label Content="user status" HorizontalAlignment="Left" Margin="39,113,0,0" VerticalAlignment="Top"/>
-        <Button Content="add user" HorizontalAlignment="Left" Margin="44,164,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button x:Name="cancelButton" Content="cancel" HorizontalAlignment="Left" Margin="47,201,0,0" VerticalAlignment="Top" Width="46" Click="cancelButton_Click"/>
+        Title="adduserPopup" Height="152" Width="360">
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180" />
+            <ColumnDefinition Width="90" />
+            <ColumnDefinition Width="90" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" Name="useridTextBox" HorizontalAlignment="Left" Grid.Column="1" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="45"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="userpasswordTextBox" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="45"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="userstatusTextBox" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="45"/>
+        <Label Grid.Row="0" Grid.Column="0" Content="login" HorizontalAlignment="Left" VerticalAlignment="Top" Height="45"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="users password" HorizontalAlignment="Left" VerticalAlignment="Top" Height="45"/>
+        <Label Grid.Row="2" Grid.Column="0" Content="user status" HorizontalAlignment="Left" VerticalAlignment="Top" Height="45"/>
+        <Button Grid.Row="3" Grid.Column="3" Content="add user" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click" Height="45" Width="90"/>
+        <Button Grid.Row="0" Grid.Column="3" x:Name="cancelButton" Content="cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Click="cancelButton_Click" Height="45" />
     </Grid>
 </Window>

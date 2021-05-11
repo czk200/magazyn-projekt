@@ -1,0 +1,22 @@
+﻿<Window x:Class="magazyn_projekt.deleteItemPopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:magazyn_projekt"
+        mc:Ignorable="d"
+        Title="deleteItemPopup" Height="150" Width="120">
+    <Grid Height="120" Width="120">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Width="120" Content="delete item with id = "/>
+        <Button x:Name="deleteItemButton" Content="delete" HorizontalAlignment="Left" Grid.Row="2" Width="120"  VerticalAlignment="Top" Click="deleteItemButton_Click"/>
+        <Button x:Name="cancelButton" Content="cancel" HorizontalAlignment="Left" Grid.Row="3" Width="120" VerticalAlignment="Top" Click="cancelButton_Click"/>
+        <TextBox x:Name="deleteItIDTextBox" HorizontalAlignment="Center" Grid.Row="1" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.271,-0.443"/>
+
+    </Grid>
+</Window>

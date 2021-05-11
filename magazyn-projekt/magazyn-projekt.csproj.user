@@ -12,6 +12,12 @@
     <Compile Update="adduserPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="deleteItemPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="editItemPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="editUserPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -30,6 +36,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="adduserPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="deleteItemPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="editItemPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="editUserPopup.xaml">

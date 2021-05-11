@@ -104,3 +104,7 @@ C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-win
 C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\editUserPopup.baml
 C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\AddItemPopup.g.cs
 C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\AddItemPopup.baml
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\deleteItemPopup.g.cs
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\editItemPopup.g.cs
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\deleteItemPopup.baml
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\editItemPopup.baml

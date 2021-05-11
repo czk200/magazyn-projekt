@@ -70,5 +70,17 @@ namespace magazyn_projekt
             AddItemPopup addItPop = new AddItemPopup();
             addItPop.Show();
         }
+
+        private void deleteItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            deleteItemPopup delItPop = new deleteItemPopup();
+            delItPop.Show();
+        }
+
+        private void editItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            editItemPopup edItPop = new editItemPopup();
+            edItPop.Show();
+        }
     }
 }

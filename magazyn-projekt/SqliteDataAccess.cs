@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using static magazyn_projekt.ManageUsers;
 using System.Collections.ObjectModel;
 using static magazyn_projekt.removeUserPopup;
+using static magazyn_projekt.deleteItemPopup;
 
 namespace magazyn_projekt
 {
@@ -77,6 +78,24 @@ namespace magazyn_projekt
             using (IDbConnection cnn = new SQLiteConnection(loadConnectionString()))
             {
                 cnn.Execute("insert into items (idDos, nazwaTow, ilosc, cenaZak, cenaSprz ) values(@idDos, @nazwaTow, @ilosc, @cenaZak, @cenaSprz)", newbs);
+            }
+        }
+
+        public static void deleteItems()
+        {
+            string removecommand = "delete from items where id='" + deleteItemPopup.removeItID + "'";
+            using (IDbConnection cnn = new SQLiteConnection(loadConnectionString()))
+            {
+
+                cnn.Execute(removecommand);
+            }
+        }
+        public static void editItems()
+        {
+            string updateCommand = "update items set " + editItemPopup.whatToEdit + "='" + editItemPopup.editContent + "' where idTow='" + editItemPopup.editID + "'";
+            using (IDbConnection cnn = new SQLiteConnection(loadConnectionString()))
+            {
+                cnn.Execute(updateCommand);
             }
         }
     }
