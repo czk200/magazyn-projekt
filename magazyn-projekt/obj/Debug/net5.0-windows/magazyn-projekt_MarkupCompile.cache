@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\App.xaml
-9-187936664
+11-1164341484
 
-13921528770
+15-100504004
 199-856704301
-AddItemPopup.xaml;adduserPopup.xaml;deleteItemPopup.xaml;editItemPopup.xaml;editUserPopup.xaml;loginWindow.xaml;MainWindow.xaml;ManageUsers.xaml;removeUserPopup.xaml;
+AddCustomerPopup.xaml;AddItemPopup.xaml;adduserPopup.xaml;CustomerWindow.xaml;deleteItemPopup.xaml;editItemPopup.xaml;editUserPopup.xaml;loginWindow.xaml;MainWindow.xaml;ManageUsers.xaml;removeUserPopup.xaml;
 
 False
 

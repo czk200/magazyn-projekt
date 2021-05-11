@@ -11,6 +11,7 @@
         <TextBox HorizontalAlignment="Left" Margin="10,54,0,0" Text="password" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="passwordBox"/>
         <TextBox HorizontalAlignment="Left" Margin="10,10,0,0" Text="login" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="loginBox"/>
         <Label Content="" HorizontalAlignment="Left" Margin="394,71,0,0" VerticalAlignment="Top" Name="loginLabel"/>
+        <Button Content="Add customer" HorizontalAlignment="Left" Margin="31,121,0,0" VerticalAlignment="Top" Click="ButtonAddCustomerClick" x:Name="LoginBUtton_Copy"/>
 
     </Grid>
 </Window>

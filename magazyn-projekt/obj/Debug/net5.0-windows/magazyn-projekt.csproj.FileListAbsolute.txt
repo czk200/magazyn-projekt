@@ -136,7 +136,6 @@ C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\bin\Debug\net5
 C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\bin\Debug\net5.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
 C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\magazyn-projekt.csprojAssemblyReference.cache
 C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\AddItemPopup.g.cs
 C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\adduserPopup.g.cs
 C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\deleteItemPopup.g.cs
@@ -168,3 +167,7 @@ C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5
 C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\ref\magazyn-projekt.dll
 C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\magazyn-projekt.pdb
 C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\magazyn-projekt.genruntimeconfig.cache
+C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\CustomerWindow.g.cs
+C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\CustomerWindow.baml
+C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\AddCustomerPopup.g.cs
+C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\AddCustomerPopup.baml
