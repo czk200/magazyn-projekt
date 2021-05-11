@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="AddCustomerPopup" Height="300" Width="200">
+        Title="AddCustomerPopup" Height="260" Width="200">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100" />
-            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition Width="120" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -18,6 +18,8 @@
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="0" Content="Firstname" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
         <Label Grid.Column="0" Grid.Row="1" Content="Lastname" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
@@ -27,8 +29,14 @@
         <Label Grid.Column="0" Grid.Row="5" Content="Address" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
 
 
-        <TextBox Grid.Column="1" Grid.Row="0" Name="FirstnameTextBox" HorizontalAlignment="Left"  Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="25"/>
-        
-        
+        <TextBox Grid.Column="1" Grid.Row="0" Name="FirstnameTextBox" Text="" TextWrapping="Wrap"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Name="LastnameTextBox" Text="" TextWrapping="Wrap"/>
+        <TextBox Grid.Column="1" Grid.Row="2" Name="LoginTextBox" Text="" TextWrapping="Wrap"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Name="PasswordTextBox" Text="" TextWrapping="Wrap"/>
+        <TextBox Grid.Column="1" Grid.Row="4" Name="EmailTextBox" Text="" TextWrapping="Wrap"/>
+        <TextBox Grid.Column="1" Grid.Row="5" Name="AddressTextBox" Text="" TextWrapping="Wrap"/>
+
+        <Button Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Content="Add" Click="ButtonAddClick"/>
+        <Button Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" Content="Cancel" Click="ButtonCancelClick"/>
     </Grid>
 </Window>

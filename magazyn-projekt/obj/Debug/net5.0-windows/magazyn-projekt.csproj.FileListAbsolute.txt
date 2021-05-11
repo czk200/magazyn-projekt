@@ -171,3 +171,4 @@ C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5
 C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\CustomerWindow.baml
 C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\AddCustomerPopup.g.cs
 C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\AddCustomerPopup.baml
+C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\magazyn-projekt.csprojAssemblyReference.cache

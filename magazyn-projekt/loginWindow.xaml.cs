@@ -24,11 +24,15 @@ namespace magazyn_projekt
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string userid = loginBox.Text;
+            string login = loginBox.Text;
             string password = passwordBox.Text;
+
+            if (string.IsNullOrEmpty(login)) { MessageBox.Show("Uzupełnij login"); return; }
+            if (string.IsNullOrEmpty(password)) { MessageBox.Show("Uzupełnij hasło"); return; }
+
             users = SqliteDataAccess.loadUsers();
             items = SqliteDataAccess.loadItems();
-            userModel user = users.FirstOrDefault(x => x.userid.Equals(userid));
+            userModel user = users.FirstOrDefault(x => x.userid.Equals(login));
 
             if (user != null && user.password.Equals(password))
             {
@@ -46,7 +50,7 @@ namespace magazyn_projekt
                     window.Focus();
                 }
             }
-            else { loginLabel.Content = "Nieprawidłowy login i/lub hasło"; }
+            else { loginInfo.Text = "Nieprawidłowy login i/lub hasło"; }
         }
 
         private void ButtonAddCustomerClick(object sender, RoutedEventArgs e)
