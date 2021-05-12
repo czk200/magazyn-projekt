@@ -15,39 +15,53 @@ using static magazyn_projekt.SqliteDataAccess;
 
 namespace magazyn_projekt
 {
-    /// <summary>
-    /// Logika interakcji dla klasy loginWindow.xaml
-    /// </summary>
     public partial class loginWindow : Window
     {
-        string statusLevel;
         public loginWindow()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {       
-            string allegedId = loginBox.Text;
+        {
+            string login = loginBox.Text;
+            string password = passwordBox.Text;
+
+            if (string.IsNullOrEmpty(login)) { MessageBox.Show("Uzupełnij login"); return; }
+            if (string.IsNullOrEmpty(password)) { MessageBox.Show("Uzupełnij hasło"); return; }
+
             users = SqliteDataAccess.loadUsers();
             items = SqliteDataAccess.loadItems();
-            int index = users.FindIndex(users => users.userid == allegedId);
+            userModel user = users.FirstOrDefault(x => x.userid.Equals(login));
 
-            if (index != -1)
+            if (user != null && user.password.Equals(password))
             {
-                if (passwordBox.Text == users[index].password)
+                Hide();
+                if (user.status.Equals("0"))
                 {
-                    statusLevel = users[index].status;
-                    MainWindow mW = new MainWindow();
-                    this.Hide();
-                    mW.Show();
-                    mW.Focus();
+                    CustomerWindow window = new CustomerWindow();
+                    window.Show();
+                    window.Focus();
                 }
-                else { loginLabel.Content = "Nieprawidłowy login i/lub hasło"; }
+                else
+                {
+                    MainWindow window = new MainWindow();
+                    window.Show();
+                    window.Focus();
+                }
             }
-            else { loginLabel.Content = "Nieprawidłowy login i/lub hasło"; }
-            
+            else { loginInfo.Text = "Nieprawidłowy login i/lub hasło"; }
+        }
 
+        private void ButtonAddCustomerClick(object sender, RoutedEventArgs e)
+        {
+            AddCustomerPopup window = new AddCustomerPopup();
+            window.ShowDialog();
+        }
+
+        private void ButtonExitClick(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

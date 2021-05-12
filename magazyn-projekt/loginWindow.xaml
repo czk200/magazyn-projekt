@@ -5,12 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="loginWindow" Height="160" Width="160">
-    <Grid> 
-        <Button Content="login" HorizontalAlignment="Left" Margin="55,96,0,0" VerticalAlignment="Top" Click="Button_Click" Name="LoginBUtton"/>
-        <TextBox HorizontalAlignment="Left" Margin="10,54,0,0" Text="password" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="passwordBox"/>
-        <TextBox HorizontalAlignment="Left" Margin="10,10,0,0" Text="login" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="loginBox"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="394,71,0,0" VerticalAlignment="Top" Name="loginLabel"/>
+        Title="loginWindow" Height="210" Width="160">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
 
+        <TextBox Grid.Row="0" Text="login" TextWrapping="Wrap" Name="loginBox"/>
+        <TextBox Grid.Row="1" Text="password" TextWrapping="Wrap" Name="passwordBox"/>
+        <TextBlock Grid.Row="2" Text="" TextWrapping="Wrap" FontSize="8" Name="loginInfo"/>
+        <Button Grid.Row="3" Content="Login" Click="Button_Click"/>
+        <Button Grid.Row="4" Content="Add customer" Click="ButtonAddCustomerClick"/>
+        <Button Grid.Row="5" Content="Exit" Click="ButtonExitClick"/>
     </Grid>
 </Window>

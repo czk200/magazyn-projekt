@@ -6,10 +6,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AddCustomerPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="AddItemPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="adduserPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CustomerWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="deleteItemPopup.xaml.cs">
@@ -32,10 +38,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AddCustomerPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="AddItemPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="adduserPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomerWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="deleteItemPopup.xaml">

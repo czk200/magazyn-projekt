@@ -48,7 +48,7 @@ namespace magazyn_projekt
         {
             using (IDbConnection cnn = new SQLiteConnection(loadConnectionString()))
             {
-                cnn.Execute("insert into users (userid, password, status ) values(@userid, @password, @status)", newbs);
+                cnn.Execute("insert into users (userid, password, status, firstname, lastname, mail, address ) values(@userid, @password, @status, @firstname, @lastname, @mail, @address)", newbs);
             }
         }
         public static void deleteUsers()
