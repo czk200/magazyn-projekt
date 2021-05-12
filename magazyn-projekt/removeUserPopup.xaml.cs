@@ -31,7 +31,15 @@ namespace magazyn_projekt
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             removeId = removeidTexbox.Text;
-            SqliteDataAccess.deleteUsers();
+            try
+            {
+                SqliteDataAccess.deleteUsers();
+            }
+            catch
+            {
+                this.Title = "something wrong happened uwo, check your input";
+                Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
+            }
             users = SqliteDataAccess.loadUsers();
         }
 

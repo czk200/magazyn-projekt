@@ -33,7 +33,15 @@ namespace magazyn_projekt
             p.userid = useridTextBox.Text;
             p.password = userpasswordTextBox.Text;
             p.status = userstatusTextBox.Text;
-            SqliteDataAccess.saveUsers(p);
+            try
+            {
+                SqliteDataAccess.saveUsers(p);
+            }
+            catch
+            {
+                this.Title = "something wrong happened uwo, check your input";
+                Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
+            }
             useridTextBox.Text = "";
             userpasswordTextBox.Text = "";
             userstatusTextBox.Text = "";

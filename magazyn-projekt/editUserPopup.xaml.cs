@@ -39,7 +39,7 @@ namespace magazyn_projekt
             whatToEdit = "userid";
             editContent = editLoginTextBox.Text;
             editID = editIdTextBox.Text;
-            SqliteDataAccess.updateUsers();
+            checker();
             users = loadUsers();
             
             
@@ -50,7 +50,7 @@ namespace magazyn_projekt
             whatToEdit = "password";
             editContent = editPasswordTextBox.Text;
             editID = editIdTextBox.Text;
-            SqliteDataAccess.updateUsers();
+            checker();
             users = loadUsers();
         }
 
@@ -59,8 +59,21 @@ namespace magazyn_projekt
             whatToEdit = "status";
             editContent = editStatusTextBox.Text;
             editID = editIdTextBox.Text;
-            SqliteDataAccess.updateUsers();
+            checker();
             users = loadUsers();
+        }
+
+        private void checker()
+        {
+            try
+            {
+                SqliteDataAccess.updateUsers();
+            }
+            catch
+            {
+                this.Title = "something wrong happened uwo, check your input";
+                Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
+            }
         }
     }
 }

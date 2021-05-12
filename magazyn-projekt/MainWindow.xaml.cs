@@ -16,6 +16,7 @@ using static System.Windows.Controls.Menu;
 using static magazyn_projekt.SqliteDataAccess;
 using System.Collections.ObjectModel;
 using System.Windows.Threading;
+using System.Data;
 
 namespace magazyn_projekt
 {
@@ -41,10 +42,7 @@ namespace magazyn_projekt
             mW.Focus();
         }
         
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
         private void dataGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -62,7 +60,16 @@ namespace magazyn_projekt
         {
             ObservableCollection<itemModel> observableItems = new ObservableCollection<itemModel>(items);
             dataGrid1.ItemsSource = null;
-            dataGrid1.ItemsSource = observableItems;
+            if(searchBar.Text!="")
+            {
+                var filter = items.Where(itemModel => itemModel.nazwaTow.StartsWith(searchBar.Text));
+                dataGrid1.ItemsSource = filter;
+            }
+            else
+            {
+                dataGrid1.ItemsSource = observableItems;
+            }
+            
         }
 
         private void addItemButton_Click(object sender, RoutedEventArgs e)
@@ -81,6 +88,11 @@ namespace magazyn_projekt
         {
             editItemPopup edItPop = new editItemPopup();
             edItPop.Show();
+        }
+
+        private void searchBar_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }
