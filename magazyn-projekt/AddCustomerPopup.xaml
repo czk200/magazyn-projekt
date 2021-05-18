@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="AddCustomerPopup" Height="260" Width="200">
+        Title="AddCustomerPopup" Height="216" Width="200">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80" />
@@ -18,8 +18,8 @@
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="0" Content="Firstname" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
         <Label Grid.Column="0" Grid.Row="1" Content="Lastname" HorizontalAlignment="Left"  VerticalAlignment="Top"/>

@@ -5,11 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="removeUserPopup" Height="157" Width="150">
-    <Grid Margin="0,0,10,-6">
-        <TextBox x:Name="removeidTexbox" HorizontalAlignment="Left" Margin="10,22,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="removeButton" Content="remove user" HorizontalAlignment="Center" Margin="0,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.117,0.056" Click="Button_Click"/>
-        <Button x:Name="cancelButton" Content="cancel" HorizontalAlignment="Center" Margin="0,94,0,0" VerticalAlignment="Top" Width="80" Click="cancelButton_Click"/>
+        Title="removeUserPopup" Height="117" Width="150">
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="1" Height="25" x:Name="removeidTexbox" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Button Grid.Row="2" Height="25" Width="150" x:Name="removeButton" Content="remove user" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.117,0.056" Click="Button_Click"/>
+        <Button Grid.Row="3" Height="25" Width="150" x:Name="cancelButton" Content="cancel" HorizontalAlignment="Center" VerticalAlignment="Top" Click="cancelButton_Click"/>
+        <Label Grid.Row="0" Content="Remove user with id = " HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

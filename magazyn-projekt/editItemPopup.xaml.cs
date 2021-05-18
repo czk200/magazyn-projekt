@@ -32,7 +32,7 @@ namespace magazyn_projekt
             whatToEdit = "nazwaTow";
             editContent = changeItNameTextBox.Text;
             editID = editIdTextBox.Text;
-            SqliteDataAccess.editItems();
+            checker();
             SqliteDataAccess.items = SqliteDataAccess.loadItems();
         }
 
@@ -41,7 +41,7 @@ namespace magazyn_projekt
             whatToEdit = "cenaSprz";
             editContent = changeItSPriceTo.Text;
             editID = editIdTextBox.Text;
-            SqliteDataAccess.editItems();
+            checker();
             SqliteDataAccess.items = SqliteDataAccess.loadItems();
         }
 
@@ -50,7 +50,7 @@ namespace magazyn_projekt
             whatToEdit = "cenaZak";
             editContent = changeItBPriceTo.Text;
             editID = editIdTextBox.Text;
-            SqliteDataAccess.editItems();
+            checker();
             SqliteDataAccess.items = SqliteDataAccess.loadItems();
         }
 
@@ -59,7 +59,7 @@ namespace magazyn_projekt
             whatToEdit = "ilosc";
             editContent = changeItQuantityTo.Text;
             editID = editIdTextBox.Text;
-            SqliteDataAccess.editItems();
+            checker();
             SqliteDataAccess.items = SqliteDataAccess.loadItems();
         }
 
@@ -68,13 +68,26 @@ namespace magazyn_projekt
             whatToEdit = "idDos";
             editContent = changeItSupplierto.Text;
             editID = editIdTextBox.Text;
-            SqliteDataAccess.editItems();
+            checker();
             SqliteDataAccess.items = SqliteDataAccess.loadItems();
         }
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
+        }
+
+        private void checker()
+        {
+            try
+            {
+                SqliteDataAccess.editItems();
+            }
+            catch
+            {
+                this.Title = "something wrong happened uwo, check your input";
+                Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
+            }
         }
     }
 }

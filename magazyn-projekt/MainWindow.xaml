@@ -17,13 +17,7 @@
             <RowDefinition Height="200"/>
             <RowDefinition Height="200"/>
         </Grid.RowDefinitions>
-        <Menu Height="16" Name="menu1" Width="1377" HorizontalAlignment="Left" VerticalAlignment="Top" Background="LightGray">
-            <MenuItem Header="Users" Click="MenuItem_Click">
-                <MenuItem Header="Manage Users" Name="addUserButton" Click="addUserButtonClick"/>
-            </MenuItem>
-        </Menu>
-
-        <DataGrid Background="LightGray" x:Name="dataGrid1" DataContext="{Binding Source=observableItems}" ItemsSource="{Binding Source=items}" SelectionChanged="dataGrid1_SelectionChanged" AutoGenerateColumns="False" Margin="0,0,0,10" Grid.RowSpan="4" Grid.Column="1">
+        <DataGrid Background="LightGray" x:Name="dataGrid1" DataContext="{Binding Source=observableItems}" ItemsSource="{Binding Source=items}" SelectionChanged="dataGrid1_SelectionChanged" AutoGenerateColumns="False" Margin="0,65,10,10" Grid.RowSpan="4" Grid.Column="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="id towaru" Binding="{Binding idTow}" Width="125"/>
                 <DataGridTextColumn Header="id dostawcy" Binding="{Binding idDos}" Width="125"/>
@@ -36,7 +30,8 @@
         <Button Grid.Row="0" x:Name="addItemButton" Content="Add Item" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="200" Width="450" Click="addItemButton_Click"/>
         <Button Grid.Row="1" x:Name="deleteItemButton" Content="Delete Item" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="200" Width="450" Click="deleteItemButton_Click"/>
         <Button Grid.Row="2" x:Name="editItemButton" Content="Edit Item" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="200" Width="450" Click="editItemButton_Click"/>
-        <Button Grid.Row="3" x:Name="manageUsersButton" Content="Manage Users" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="200" Width="450" Click="editItemButton_Click"/>
+        <Button Grid.Row="3" x:Name="manageUsersButton" Content="Manage Users" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="200" Width="450" Click="addUserButtonClick"/>
+        <TextBox x:Name="searchBar"  Grid.Column="1" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="740" Height="34" Margin="0,16,0,0" KeyDown="searchBar_KeyDown"/>
 
     </Grid>
 </Window>
