@@ -20,7 +20,7 @@ namespace magazyn_projekt
         public static string userLevel;
         public loginWindow()
         {
-            InitializeComponent();
+            InitializeComponent();        
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
