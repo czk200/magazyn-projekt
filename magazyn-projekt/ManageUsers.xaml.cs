@@ -30,7 +30,13 @@ namespace magazyn_projekt
         {
             InitializeComponent();
             dataGrid1.ItemsSource = observableUsers;
+            if (loginWindow.userLevel != "3" && loginWindow.userLevel != "2")
+            {
+                editUserButton.IsEnabled = false;
+                removeButton.IsEnabled = false;
+            }
             InitTimer();
+           
         }
         
         private void backButtonClick(object sender, RoutedEventArgs e)
@@ -73,7 +79,15 @@ namespace magazyn_projekt
         {
             ObservableCollection<userModel> observableUsers = new ObservableCollection<userModel>(users);
             dataGrid1.ItemsSource = null;
-            dataGrid1.ItemsSource = observableUsers;
+            if (searchBar.Text != "")
+            {
+                var filter = users.Where(userModel => userModel.userid.StartsWith(searchBar.Text));
+                dataGrid1.ItemsSource = filter;
+            }
+            else
+            {
+                dataGrid1.ItemsSource = observableUsers;
+            }
         }
 
         private void editUserButton_Click(object sender, RoutedEventArgs e)

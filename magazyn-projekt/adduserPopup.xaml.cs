@@ -30,16 +30,28 @@ namespace magazyn_projekt
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             userModel p = new userModel();
-            p.userid = useridTextBox.Text;
-            p.password = userpasswordTextBox.Text;
-            p.status = userstatusTextBox.Text;
+            if (useridTextBox.Text != "") p.userid = useridTextBox.Text;
+            if (userpasswordTextBox.Text != "") p.password = userpasswordTextBox.Text;
+            if (userstatusTextBox.Text != "")
+                if (userstatusTextBox.Text != "")
+                {
+                    if (loginWindow.userLevel == "2" && userstatusTextBox.Text != "1")
+                    {
+                        this.Title = "manager can only add workers, correct your input please";
+                    }
+                    else
+                    {
+                        p.status = userstatusTextBox.Text;
+                    }
+
+                }
             try
             {
                 SqliteDataAccess.saveUsers(p);
             }
             catch
             {
-                this.Title = "something wrong happened uwo, check your input";
+                this.Title = "something wrong happened uwo, check your input (given login might be already in use)";
                 Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
             }
             useridTextBox.Text = "";

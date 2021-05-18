@@ -17,6 +17,7 @@ using static magazyn_projekt.SqliteDataAccess;
 using System.Collections.ObjectModel;
 using System.Windows.Threading;
 using System.Data;
+using static magazyn_projekt.loginWindow;
 
 namespace magazyn_projekt
 {
@@ -32,7 +33,14 @@ namespace magazyn_projekt
             InitializeComponent();
             dataGrid1.ItemsSource = observableItems;
             InitTimer();
-
+            if (loginWindow.userLevel != "3")
+            {
+                if (loginWindow.userLevel != "2")
+                {
+                    manageUsersButton.IsEnabled = false;
+                    deleteItemButton.IsEnabled = false;
+                }
+            }
         }
         private void addUserButtonClick(object sender, RoutedEventArgs e)
         {

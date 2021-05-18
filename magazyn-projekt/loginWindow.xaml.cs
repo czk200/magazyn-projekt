@@ -17,13 +17,16 @@ namespace magazyn_projekt
 {
     public partial class loginWindow : Window
     {
+        public static string userLevel;
         public loginWindow()
         {
             InitializeComponent();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             string login = loginBox.Text;
             string password = passwordBox.Text;
 
@@ -39,12 +42,29 @@ namespace magazyn_projekt
                 Hide();
                 if (user.status.Equals("0"))
                 {
+                    userLevel = "0";
                     CustomerWindow window = new CustomerWindow();
                     window.Show();
                     window.Focus();
+
                 }
-                else
+                else if (user.status.Equals("1"))
                 {
+                    userLevel = "1";
+                    MainWindow window = new MainWindow();
+                    window.Show();
+                    window.Focus();
+                }
+                else if (user.status.Equals("2"))
+                {
+                    userLevel = "2";
+                    MainWindow window = new MainWindow();
+                    window.Show();
+                    window.Focus();
+                }
+                else if (user.status.Equals("3"))
+                {
+                    userLevel = "3";
                     MainWindow window = new MainWindow();
                     window.Show();
                     window.Focus();
