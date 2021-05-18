@@ -20,6 +20,8 @@ namespace magazyn_projekt
         public loginWindow()
         {
             InitializeComponent();
+            loginBox.Text = "uzytkownik";
+            passwordBox.Text = "uzytkownik";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
