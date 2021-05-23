@@ -35,6 +35,7 @@ namespace magazyn_projekt
         private void deleteItemButton_Click(object sender, RoutedEventArgs e)
         {
             removeItID = deleteItIDTextBox.Text;
+            SqliteDataAccess.deleteItems();
             try
             {
                 SqliteDataAccess.deleteItems();
@@ -42,7 +43,6 @@ namespace magazyn_projekt
             catch
             {
                 this.Title = "something wrong happened uwo, check your input";
-                Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
             }
             SqliteDataAccess.items = SqliteDataAccess.loadItems();
         }

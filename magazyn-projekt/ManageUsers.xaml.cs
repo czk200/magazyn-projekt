@@ -81,8 +81,22 @@ namespace magazyn_projekt
             dataGrid1.ItemsSource = null;
             if (searchBar.Text != "")
             {
-                var filter = users.Where(userModel => userModel.userid.StartsWith(searchBar.Text));
-                dataGrid1.ItemsSource = filter;
+                if(comboBox.SelectedValue.ToString()=="Id")
+                {
+                    var filter = users.Where(userModel => userModel.id.ToString().StartsWith(searchBar.Text));
+                    dataGrid1.ItemsSource = filter;
+                }
+                else if(comboBox.SelectedValue.ToString() == "Status")
+                {
+                    var filter = users.Where(userModel => userModel.status.ToString().StartsWith(searchBar.Text));
+                    dataGrid1.ItemsSource = filter;
+                }
+                else if (comboBox.SelectedValue.ToString() == "Login")
+                {
+                    var filter = users.Where(userModel => userModel.userid.StartsWith(searchBar.Text));
+                    dataGrid1.ItemsSource = filter;
+                }
+
             }
             else
             {
@@ -94,6 +108,10 @@ namespace magazyn_projekt
         {
             editUserPopup edUsPop = new editUserPopup();
             edUsPop.Show();
+        }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
         }
     }
 }
