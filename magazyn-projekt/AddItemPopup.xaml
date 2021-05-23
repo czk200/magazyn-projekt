@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="AddItemPopup" SizeToContent="WidthAndHeight">
+        Title="AddItemPopup" Height="141" Width="360">
     <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="180" />
@@ -19,7 +19,7 @@
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Column="1" Grid.Row="0" x:Name="supplierIdTextBox" HorizontalAlignment="Left"  Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="25" TextChanged="supplierIdTextBox_TextChanged"/>
+        <TextBox Grid.Column="1" Grid.Row="0" x:Name="supplierIdTextBox" HorizontalAlignment="Left"  Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="25"/>
         <Label Grid.Column="0" Grid.Row="0" Content="Supplier Id" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
         <TextBox Grid.Column="1" Grid.Row="1" x:Name="itemNameTextBox" HorizontalAlignment="Left"  Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="25"/>
         <Label Grid.Column="0" Grid.Row="1" Content="item Name" HorizontalAlignment="Left"  VerticalAlignment="Top"/>

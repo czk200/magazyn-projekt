@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static magazyn_projekt.SqliteDataAccess;
+using static magazyn_projekt.loginWindow;
 
 namespace magazyn_projekt
 {
@@ -97,7 +98,13 @@ namespace magazyn_projekt
 
         private void ButtonKupTerazClick(object sender, RoutedEventArgs e)
         {
-            
+            if (koszyk.Count > 0)
+            {
+                addInvoice(koszyk, userLogged);
+                koszyk.Clear();
+                OdswiezWidokKoszyka();
+                OdswiezWidokSklepu();
+            }
         }
 
         private void ButtonUsunZaznaczoneClick(object sender, RoutedEventArgs e)

@@ -57,18 +57,7 @@ namespace magazyn_projekt
         private void editStatusButton_Click(object sender, RoutedEventArgs e)
         {
             whatToEdit = "status";
-            if (Int32.Parse(editStatusTextBox.Text)<=3 && Int32.Parse(editStatusTextBox.Text) >= 0)
-            {
-                try
-                {
-                        editContent = editStatusTextBox.Text;
-                }
-                catch
-                {
-                    this.Title = "something wrong happened uwo, check your input";
-                }
-            }
-               
+            editContent = editStatusTextBox.Text;
             editID = editIdTextBox.Text;
             checker();
             users = loadUsers();
@@ -83,6 +72,7 @@ namespace magazyn_projekt
             catch
             {
                 this.Title = "something wrong happened uwo, check your input";
+                Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
             }
         }
     }

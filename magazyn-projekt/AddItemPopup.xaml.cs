@@ -18,20 +18,20 @@ namespace magazyn_projekt
 
         private void addItemButton_Click(object sender, RoutedEventArgs e)
         {
-            try
-            { 
             itemModel p = new itemModel();
             if (supplierIdTextBox.Text != "") p.idDos = Int32.Parse(supplierIdTextBox.Text);
             if (itemQuantityTextBox.Text != "") p.ilosc = Int32.Parse(itemQuantityTextBox.Text);
             if (itemNameTextBox.Text != "") p.nazwaTow = itemNameTextBox.Text;
             if (buyingPriceTextBox.Text != "") p.cenaZak = float.Parse(buyingPriceTextBox.Text);
             if (sellingPriceTextBox.Text != "") p.cenaSprz = float.Parse(sellingPriceTextBox.Text);
-            SqliteDataAccess.addItem(p);
+            try
+            {
+                SqliteDataAccess.addItem(p);
             }
             catch
             {
                 this.Title = "something wrong happened uwo, check your input";
-
+                Task.Delay(2000).ContinueWith(t=>this.Title = "Add Item");
             }
             supplierIdTextBox.Text = "";
             itemQuantityTextBox.Text = "";
@@ -39,11 +39,6 @@ namespace magazyn_projekt
             sellingPriceTextBox.Text = "";
             buyingPriceTextBox.Text = "";
             items = SqliteDataAccess.loadItems();
-        }
-
-        private void supplierIdTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-
         }
     }
 }

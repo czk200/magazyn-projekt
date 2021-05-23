@@ -18,6 +18,7 @@ namespace magazyn_projekt
     public partial class loginWindow : Window
     {
         public static string userLevel;
+        public static userModel userLogged = null;
         public loginWindow()
         {
             InitializeComponent();        
@@ -25,7 +26,6 @@ namespace magazyn_projekt
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
             string login = loginBox.Text;
             string password = passwordBox.Text;
 
@@ -34,12 +34,12 @@ namespace magazyn_projekt
 
             users = SqliteDataAccess.loadUsers();
             items = SqliteDataAccess.loadItems();
-            userModel user = users.FirstOrDefault(x => x.userid.Equals(login));
+            userLogged = users.FirstOrDefault(x => x.userid.Equals(login));
 
-            if (user != null && user.password.Equals(password))
+            if (userLogged != null && userLogged.password.Equals(password))
             {
                 Hide();
-                if (user.status.Equals("0"))
+                if (userLogged.status.Equals("0"))
                 {
                     userLevel = "0";
                     CustomerWindow window = new CustomerWindow();
@@ -47,21 +47,21 @@ namespace magazyn_projekt
                     window.Focus();
 
                 }
-                else if (user.status.Equals("1"))
+                else if (userLogged.status.Equals("1"))
                 {
                     userLevel = "1";
                     MainWindow window = new MainWindow();
                     window.Show();
                     window.Focus();
                 }
-                else if (user.status.Equals("2"))
+                else if (userLogged.status.Equals("2"))
                 {
                     userLevel = "2";
                     MainWindow window = new MainWindow();
                     window.Show();
                     window.Focus();
                 }
-                else if (user.status.Equals("3"))
+                else if (userLogged.status.Equals("3"))
                 {
                     userLevel = "3";
                     MainWindow window = new MainWindow();

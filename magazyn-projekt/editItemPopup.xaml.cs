@@ -86,6 +86,7 @@ namespace magazyn_projekt
             catch
             {
                 this.Title = "something wrong happened uwo, check your input";
+                Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
             }
         }
     }

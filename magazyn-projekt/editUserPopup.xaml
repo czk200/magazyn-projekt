@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="editUserPopup" SizeToContent="WidthAndHeight">
+        Title="editUserPopup" Height="116" Width="360">
     <Grid Background="LightGray" HorizontalAlignment="Center" Width="360">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="180" />

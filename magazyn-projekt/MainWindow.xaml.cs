@@ -70,22 +70,8 @@ namespace magazyn_projekt
             dataGrid1.ItemsSource = null;
             if(searchBar.Text!="")
             {
-                if (comboBox.SelectedValue.ToString() == "Supplier Id")
-                {
-                    var filter = items.Where(itemModel => itemModel.idDos.ToString().StartsWith(searchBar.Text));
-                    dataGrid1.ItemsSource = filter;
-                }
-                else if (comboBox.SelectedValue.ToString() == "Item Name")
-                {
-                    var filter = items.Where(itemModel => itemModel.nazwaTow.ToString().StartsWith(searchBar.Text));
-                    dataGrid1.ItemsSource = filter;
-                }
-                else if (comboBox.SelectedValue.ToString() == "Item Id")
-                {
-                    var filter = items.Where(itemModel => itemModel.idTow.ToString().StartsWith(searchBar.Text));
-                    dataGrid1.ItemsSource = filter;
-                }
-               
+                var filter = items.Where(itemModel => itemModel.nazwaTow.StartsWith(searchBar.Text));
+                dataGrid1.ItemsSource = filter;
             }
             else
             {
