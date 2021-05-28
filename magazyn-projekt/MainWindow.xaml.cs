@@ -49,8 +49,8 @@ namespace magazyn_projekt
             mW.Show();
             mW.Focus();
         }
-        
-       
+
+
         private void dataGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -68,16 +68,30 @@ namespace magazyn_projekt
         {
             ObservableCollection<itemModel> observableItems = new ObservableCollection<itemModel>(items);
             dataGrid1.ItemsSource = null;
-            if(searchBar.Text!="")
+            if (searchBar.Text != "")
             {
-                var filter = items.Where(itemModel => itemModel.nazwaTow.StartsWith(searchBar.Text));
-                dataGrid1.ItemsSource = filter;
+                if (comboBox.SelectedValue.ToString() == "Supplier Id")
+                {
+                    var filter = items.Where(itemModel => itemModel.idDos.ToString().StartsWith(searchBar.Text));
+                    dataGrid1.ItemsSource = filter;
+                }
+                else if (comboBox.SelectedValue.ToString() == "Item Name")
+                {
+                    var filter = items.Where(itemModel => itemModel.nazwaTow.ToString().StartsWith(searchBar.Text));
+                    dataGrid1.ItemsSource = filter;
+                }
+                else if (comboBox.SelectedValue.ToString() == "Item Id")
+                {
+                    var filter = items.Where(itemModel => itemModel.idTow.ToString().StartsWith(searchBar.Text));
+                    dataGrid1.ItemsSource = filter;
+                }
+
             }
             else
             {
                 dataGrid1.ItemsSource = observableItems;
             }
-            
+
         }
 
         private void addItemButton_Click(object sender, RoutedEventArgs e)

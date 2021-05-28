@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\obj\Debug\net5.0-windows\
 magazyn_projekt
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\dbierna\Documents\GitHub\magazyn-projekt\magazyn-projekt\App.xaml
+C:\Users\naall\source\repos\magazyn-projekt\magazyn-projekt\App.xaml
 11-1164341484
 
 15-100504004
-199-856704301
+1991863563797
 AddCustomerPopup.xaml;AddItemPopup.xaml;adduserPopup.xaml;CustomerWindow.xaml;deleteItemPopup.xaml;editItemPopup.xaml;editUserPopup.xaml;loginWindow.xaml;MainWindow.xaml;ManageUsers.xaml;removeUserPopup.xaml;
 
 False

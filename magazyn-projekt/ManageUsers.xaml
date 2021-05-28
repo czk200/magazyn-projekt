@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="ManageUsers" Height="800" Width="1200">
+        Title="ManageUsers" SizeToContent="WidthAndHeight">
     <Grid Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="450"/>
@@ -29,7 +29,19 @@
         <Button x:Name="addUserButton" Content="Add User" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Height="200" Width="450" Click="addButton_Click"/>
         <Button x:Name="removeButton" Content="Remove User" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" Width="450" Click="removeButton_Click" Height="200"/>
         <Button x:Name="editUserButton" Content="Edit User" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="0" VerticalAlignment="Top" Height="200" Width="450" Click="editUserButton_Click"/>
-        <TextBox x:Name="searchBar" Grid.Column="1" HorizontalAlignment="Left" Margin="52,15,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="508"/>
+        <TextBox x:Name="searchBar" Grid.Column="1" HorizontalAlignment="Left" Margin="52,15,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="508"/>
+        <ComboBox SelectedIndex="1" SelectedValuePath="Content" x:Name="comboBox" Grid.Column="1" HorizontalAlignment="Left" Margin="595,13,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged">
+            <ComboBoxItem>
+                Id
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Login
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Status
+            </ComboBoxItem>
+        </ComboBox>
+
 
 
     </Grid>
