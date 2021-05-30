@@ -32,7 +32,7 @@ namespace magazyn_projekt
             this.Hide();
         }
 
-        private void deleteItemButton_Click(object sender, RoutedEventArgs e)
+        public void deleteItemButton_Click(object sender, RoutedEventArgs e)
         {
             removeItID = deleteItIDTextBox.Text;
             try
@@ -41,8 +41,17 @@ namespace magazyn_projekt
             }
             catch
             {
-                this.Title = "something wrong happened uwo, check your input";
-                Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
+                async Task pepegaWait()
+                {
+                    this.Title = "something wrong happened uwo, check your input";
+                    var t1 = Task.Delay(2000);
+                    await t1;
+                    this.Title = "Delete Item";
+
+                }
+                pepegaWait();
+    
+                
             }
             SqliteDataAccess.items = SqliteDataAccess.loadItems();
         }
