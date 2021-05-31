@@ -30,8 +30,16 @@ namespace magazyn_projekt
             }
             catch
             {
-                this.Title = "something wrong happened uwo, check your input";
-                Task.Delay(2000).ContinueWith(t=>this.Title = "Add Item");
+                async Task pepegaWait()
+                {
+                    this.Title = "something wrong happened uwo, check your input";
+                    var t1 = Task.Delay(2000);
+                    await t1;
+                    this.Title = "Add Item";
+
+                }
+                pepegaWait();
+
             }
             supplierIdTextBox.Text = "";
             itemQuantityTextBox.Text = "";

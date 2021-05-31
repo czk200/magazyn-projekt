@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="removeUserPopup" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+        Title="Remove User" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
     <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150" />

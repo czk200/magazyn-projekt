@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="ManageUsers" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+        Title="User Manager" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
     <Grid Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="450"/>
-            <ColumnDefinition Width="750"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="900"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="200"/>
@@ -17,18 +17,21 @@
             <RowDefinition Height="200"/>
             <RowDefinition Height="200"/>
         </Grid.RowDefinitions>
-        <Button Content="back to menu" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Name="backButton" Click="backButtonClick" Height="200" Width="450"/>
+        <Button Content="back to menu" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Name="backButton" Click="backButtonClick" Height="200" Width="250"/>
         <DataGrid x:Name="dataGrid1" Background="White"  DataContext="{Binding Source=observableUsers}" ItemsSource="{Binding Source=users}" SelectionChanged="dataGrid1_SelectionChanged" AutoGenerateColumns="False" Margin="10,42,10,31" Grid.Column="1" Grid.RowSpan="4">
             <DataGrid.Columns>
                 <DataGridTextColumn Header=" id" Binding="{Binding id}" Width="125"/>
                 <DataGridTextColumn Header="user status" Binding="{Binding status}" Width="125"/>
                 <DataGridTextColumn Header="login" Binding="{Binding userid}" Width="125"/>
-
+                <DataGridTextColumn Header="mail" Binding="{Binding mail}" Width="125"/>
+                <DataGridTextColumn Header="adress" Binding="{Binding adress}" Width="125"/>
+                <DataGridTextColumn Header="first name" Binding="{Binding firstname}" Width="125"/>
+                <DataGridTextColumn Header="last name" Binding="{Binding lastname}" Width="125"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="addUserButton" Content="Add User" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Height="200" Width="450" Click="addButton_Click"/>
-        <Button x:Name="removeButton" Content="Remove User" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" Width="450" Click="removeButton_Click" Height="200"/>
-        <Button x:Name="editUserButton" Content="Edit User" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="0" VerticalAlignment="Top" Height="200" Width="450" Click="editUserButton_Click"/>
+        <Button x:Name="addUserButton" Content="Add User" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Height="200" Width="250" Click="addButton_Click"/>
+        <Button x:Name="removeButton" Content="Remove User" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" Width="250" Click="removeButton_Click" Height="200"/>
+        <Button x:Name="editUserButton" Content="Edit User" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="0" VerticalAlignment="Top" Height="200" Width="250" Click="editUserButton_Click"/>
         <TextBox x:Name="searchBar" Grid.Column="1" HorizontalAlignment="Left" Margin="52,15,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="508"/>
         <ComboBox SelectedIndex="1" SelectedValuePath="Content" x:Name="comboBox" Grid.Column="1" HorizontalAlignment="Left" Margin="595,13,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged">
             <ComboBoxItem>
