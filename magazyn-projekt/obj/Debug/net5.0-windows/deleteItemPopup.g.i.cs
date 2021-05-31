@@ -77,7 +77,7 @@ namespace magazyn_projekt {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/magazyn-projekt;V1.0.0.0;component/deleteitempopup.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/magazyn-projekt;component/deleteitempopup.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\deleteItemPopup.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

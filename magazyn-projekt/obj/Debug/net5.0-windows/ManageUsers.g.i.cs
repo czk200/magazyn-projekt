@@ -109,7 +109,7 @@ namespace magazyn_projekt {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/magazyn-projekt;V1.0.0.0;component/manageusers.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/magazyn-projekt;component/manageusers.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ManageUsers.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

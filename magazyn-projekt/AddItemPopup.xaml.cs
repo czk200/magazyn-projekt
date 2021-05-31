@@ -19,13 +19,13 @@ namespace magazyn_projekt
         private void addItemButton_Click(object sender, RoutedEventArgs e)
         {
             itemModel p = new itemModel();
-            if (supplierIdTextBox.Text != "") p.idDos = Int32.Parse(supplierIdTextBox.Text);
-            if (itemQuantityTextBox.Text != "") p.ilosc = Int32.Parse(itemQuantityTextBox.Text);
-            if (itemNameTextBox.Text != "") p.nazwaTow = itemNameTextBox.Text;
-            if (buyingPriceTextBox.Text != "") p.cenaZak = float.Parse(buyingPriceTextBox.Text);
-            if (sellingPriceTextBox.Text != "") p.cenaSprz = float.Parse(sellingPriceTextBox.Text);
             try
             {
+                if (supplierIdTextBox.Text != "") p.idDos = Int32.Parse(supplierIdTextBox.Text);
+                if (itemQuantityTextBox.Text != "") p.ilosc = Int32.Parse(itemQuantityTextBox.Text);
+                if (itemNameTextBox.Text != "") p.nazwaTow = itemNameTextBox.Text;
+                if (buyingPriceTextBox.Text != "") p.cenaZak = float.Parse(buyingPriceTextBox.Text.Replace(",", "."));
+                if (sellingPriceTextBox.Text != "") p.cenaSprz = float.Parse(sellingPriceTextBox.Text.Replace(",", "."));
                 SqliteDataAccess.addItem(p);
             }
             catch

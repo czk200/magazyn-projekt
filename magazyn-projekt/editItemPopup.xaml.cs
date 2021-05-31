@@ -29,6 +29,7 @@ namespace magazyn_projekt
 
         private void changeItNameBtn_Click(object sender, RoutedEventArgs e)
         {
+            prechecker();
             whatToEdit = "nazwaTow";
             editContent = changeItNameTextBox.Text;
             editID = editIdTextBox.Text;
@@ -39,7 +40,7 @@ namespace magazyn_projekt
         private void changeItSPriceBtn_Click(object sender, RoutedEventArgs e)
         {
             whatToEdit = "cenaSprz";
-            editContent = changeItSPriceTo.Text;
+            editContent = changeItSPriceTo.Text.Replace(",",".");
             editID = editIdTextBox.Text;
             checker();
             SqliteDataAccess.items = SqliteDataAccess.loadItems();
@@ -48,7 +49,7 @@ namespace magazyn_projekt
         private void changeItBPriceBtn_Click(object sender, RoutedEventArgs e)
         {
             whatToEdit = "cenaZak";
-            editContent = changeItBPriceTo.Text;
+            editContent = changeItBPriceTo.Text.Replace(",", ".");
             editID = editIdTextBox.Text;
             checker();
             SqliteDataAccess.items = SqliteDataAccess.loadItems();
@@ -97,5 +98,21 @@ namespace magazyn_projekt
 
             }
         }
+        private void prechecker()
+        {
+            if (editIdTextBox.Text == "")
+            {
+                async Task pepegaWait()
+                {
+                    this.Title = "u forgot id OwO";
+                    var t1 = Task.Delay(2000);
+                    await t1;
+                    this.Title = "Edit Item";
+
+                }
+                pepegaWait();
+            }
+        }
+
     }
 }
