@@ -36,8 +36,8 @@ namespace magazyn_projekt
 
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
-            prechecker();
-            if(editLoginTextBox.Text!="")
+
+            if(editLoginTextBox.Text!="" && editIdTextBox.Text!="")
             {
                 whatToEdit = "userid";
                 editContent = editLoginTextBox.Text;
@@ -54,7 +54,7 @@ namespace magazyn_projekt
         private void editPasswordButton_Click(object sender, RoutedEventArgs e)
         {
             prechecker();
-            if (editPasswordTextBox.Text != "")
+            if (editPasswordTextBox.Text != "" && editIdTextBox.Text != "")
             {
                 whatToEdit = "password";
                 editContent = editPasswordTextBox.Text;
@@ -99,22 +99,27 @@ namespace magazyn_projekt
 
         private void editFnameButton_Click(object sender, RoutedEventArgs e)
         {
-            prechecker();
-            whatToEdit = "firstname";
-            editContent = editFnameTextBox.Text;
-            editID = editIdTextBox.Text;
-            checker();
-            users = loadUsers();
+            if (editIdTextBox.Text != "")
+            {
+                whatToEdit = "firstname";
+                editContent = editFnameTextBox.Text;
+                editID = editIdTextBox.Text;
+                checker();
+                users = loadUsers();
+            }
         }
 
         private void editLnameButton_Click(object sender, RoutedEventArgs e)
         {
-            prechecker();
-            whatToEdit = "lastname";
-            editContent = editLnameTextBox.Text;
-            editID = editIdTextBox.Text;
-            checker();
-            users = loadUsers();
+            if (editIdTextBox.Text != "")
+            {
+                prechecker();
+                whatToEdit = "lastname";
+                editContent = editLnameTextBox.Text;
+                editID = editIdTextBox.Text;
+                checker();
+                users = loadUsers();
+            }
         }
 
         async Task pepegaWait()
