@@ -68,15 +68,13 @@ namespace magazyn_projekt
         private void editStatusButton_Click(object sender, RoutedEventArgs e)
         {
             prechecker();
-            if (editStatusTextBox.Text != "")
-            {
+            
                 whatToEdit = "status";
-                editContent = editStatusTextBox.Text;
+                editContent = ComboBox.SelectedIndex.ToString();
                 editID = editIdTextBox.Text;
                 checker();
                 users = loadUsers();
-            }
-            else pepegaWait();
+
         }
         private void checker()
         {

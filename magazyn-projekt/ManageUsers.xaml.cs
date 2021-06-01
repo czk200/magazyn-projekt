@@ -30,10 +30,14 @@ namespace magazyn_projekt
         {
             InitializeComponent();
             dataGrid1.ItemsSource = observableUsers;
-            if (loginWindow.userLevel != "3" && loginWindow.userLevel != "2")
+            if (loginWindow.userLevel != "3")
             {
                 editUserButton.IsEnabled = false;
                 removeButton.IsEnabled = false;
+            }
+            if(loginWindow.userLevel != "2" && loginWindow.userLevel!="3")
+            {
+                addUserButton.IsEnabled = false;
             }
             InitTimer();
 

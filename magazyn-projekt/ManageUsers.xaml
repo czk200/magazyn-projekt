@@ -24,7 +24,7 @@
                 <DataGridTextColumn Header="user status" Binding="{Binding status}" Width="125"/>
                 <DataGridTextColumn Header="login" Binding="{Binding userid}" Width="125"/>
                 <DataGridTextColumn Header="mail" Binding="{Binding mail}" Width="125"/>
-                <DataGridTextColumn Header="adress" Binding="{Binding adress}" Width="125"/>
+                <DataGridTextColumn Header="address" Binding="{Binding address}" Width="125"/>
                 <DataGridTextColumn Header="first name" Binding="{Binding firstname}" Width="125"/>
                 <DataGridTextColumn Header="last name" Binding="{Binding lastname}" Width="125"/>
             </DataGrid.Columns>
