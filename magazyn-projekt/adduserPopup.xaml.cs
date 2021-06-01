@@ -39,9 +39,14 @@ namespace magazyn_projekt
                         p.status = ComboBox.SelectedIndex.ToString();
                         if (useridTextBox.Text != "") p.userid = useridTextBox.Text;
                         if (userpasswordTextBox.Text != "") p.password = userpasswordTextBox.Text;
-                        p.address = "";
-                        SqliteDataAccess.saveUsers(p);
-                        pepegaWait();
+                try
+                {
+                    SqliteDataAccess.saveUsers(p);
+                }
+                catch
+                {
+                    pepegaWait();
+                }
 
                     }
 

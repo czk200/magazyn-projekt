@@ -38,7 +38,7 @@
         <Button Grid.Row="3" Grid.Column="2" x:Name="editStatusButton" Content="edit" HorizontalAlignment="Left" VerticalAlignment="Top" Click="editStatusButton_Click" Width="90" Height="25"/>
         <Button Grid.Row="5" Grid.Column="2" x:Name="editLnameButton" Content="edit" HorizontalAlignment="Left" VerticalAlignment="Top" Click="editLnameButton_Click" Width="90" Height="25"/>
         <Button Grid.Row="4" Grid.Column="2" x:Name="editFnameButton" Content="edit" HorizontalAlignment="Left" VerticalAlignment="Top" Click="editFnameButton_Click" Width="90" Height="25"/>
-        <ComboBox Grid.Row="3" Grid.Column="1" Name="ComboBox" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="90" Height="25">
+        <ComboBox SelectedIndex="0" Grid.Row="3" Grid.Column="1" Name="ComboBox" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="90" Height="25">
             <ComboBoxItem>
                 0
             </ComboBoxItem>
