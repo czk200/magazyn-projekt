@@ -33,7 +33,8 @@ namespace magazyn_projekt
                 if (itemNameTextBox.Text != "") p.nazwaTow = itemNameTextBox.Text; else pepegaWait();
                 if (buyingPriceTextBox.Text != "") p.cenaZak = float.Parse(buyingPriceTextBox.Text.Replace(",", ".")); else pepegaWait();
                 if (sellingPriceTextBox.Text != "") p.cenaSprz = float.Parse(sellingPriceTextBox.Text.Replace(",", ".")); else pepegaWait();
-                
+                SqliteDataAccess.addItem(p);
+
             }
             catch
             {
@@ -41,7 +42,7 @@ namespace magazyn_projekt
                 pepegaWait();
 
             }
-            SqliteDataAccess.addItem(p);
+            
             
             supplierIdTextBox.Text = "";
             itemQuantityTextBox.Text = "";

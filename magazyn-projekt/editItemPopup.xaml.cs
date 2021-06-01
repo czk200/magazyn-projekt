@@ -31,14 +31,21 @@ namespace magazyn_projekt
 
         private void changeItNameBtn_Click(object sender, RoutedEventArgs e)
         {
-            prechecker();
-            if(changeItNameTextBox.Text!="")
+            if(changeItNameTextBox.Text!= "" && editIdTextBox.Text != "")
             {
-                whatToEdit = "nazwaTow";
-                editContent = changeItNameTextBox.Text;
-                editID = editIdTextBox.Text;
-                checker();
-                SqliteDataAccess.items = SqliteDataAccess.loadItems();
+                try
+                {
+                    whatToEdit = "nazwaTow";
+                    editContent = changeItNameTextBox.Text;
+                    editID = editIdTextBox.Text;
+                    checker();
+                    SqliteDataAccess.items = SqliteDataAccess.loadItems();
+
+                }
+                catch
+                {
+                    pepegaWait();
+                }
 
             }
             else pepegaWait();
@@ -47,14 +54,21 @@ namespace magazyn_projekt
 
         private void changeItSPriceBtn_Click(object sender, RoutedEventArgs e)
         {
-            if(changeItSPriceTo.Text!="")
+            if(changeItSPriceTo.Text!= "" && editIdTextBox.Text != "")
             {
-                prechecker();
-                whatToEdit = "cenaSprz";
-                editContent = changeItSPriceTo.Text.Replace(",", ".");
-                editID = editIdTextBox.Text;
-                checker();
-                SqliteDataAccess.items = SqliteDataAccess.loadItems();
+                try
+                {
+                    floatDummy = float.Parse(changeItSPriceTo.Text.Replace(",", "."));
+                    whatToEdit = "cenaSprz";
+                    editContent = changeItSPriceTo.Text.Replace(",", ".");
+                    editID = editIdTextBox.Text;
+                    checker();
+                    SqliteDataAccess.items = SqliteDataAccess.loadItems();
+                }
+                catch
+                {
+                    pepegaWait();
+                }
 
             }
             else pepegaWait();
@@ -63,14 +77,21 @@ namespace magazyn_projekt
 
         private void changeItBPriceBtn_Click(object sender, RoutedEventArgs e)
         {
-            if(changeItBPriceTo.Text!="")
+            if(changeItBPriceTo.Text!= "" && editIdTextBox.Text != "")
             {
-                prechecker();
-                whatToEdit = "cenaZak";
-                editContent = changeItBPriceTo.Text.Replace(",", ".");
-                editID = editIdTextBox.Text;
-                checker();
-                SqliteDataAccess.items = SqliteDataAccess.loadItems();
+                try
+                {
+                    floatDummy = float.Parse(changeItBPriceTo.Text.Replace(",", "."));
+                    whatToEdit = "cenaZak";
+                    editContent = changeItBPriceTo.Text.Replace(",", ".");
+                    editID = editIdTextBox.Text;
+                    checker();
+                    SqliteDataAccess.items = SqliteDataAccess.loadItems();
+                }
+                catch
+                {
+                    pepegaWait();
+                }
             }
             else pepegaWait();
 
@@ -78,14 +99,21 @@ namespace magazyn_projekt
 
         private void changeItQtyBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (changeItQuantityTo.Text != "")
+            if (changeItQuantityTo.Text != "" && editIdTextBox.Text != "")
             {
-                prechecker();
-                whatToEdit = "ilosc";
-                editContent = changeItQuantityTo.Text;
-                editID = editIdTextBox.Text;
-                checker();
-                SqliteDataAccess.items = SqliteDataAccess.loadItems();
+                try
+                {
+                    intDummy = Int32.Parse(changeItQuantityTo.Text);
+                    whatToEdit = "ilosc";
+                    editContent = changeItQuantityTo.Text;
+                    editID = editIdTextBox.Text;
+                    checker();
+                    SqliteDataAccess.items = SqliteDataAccess.loadItems();
+                }
+                catch
+                {
+
+                }
             }
             else pepegaWait();
             
@@ -93,21 +121,22 @@ namespace magazyn_projekt
 
         private void changeItSupplierBtn_Click(object sender, RoutedEventArgs e)
         {
-            if(changeItSupplierto.Text!="")
+
+            if(changeItSupplierto.Text!="" && editIdTextBox.Text != "")
             {
-                whatToEdit = "idDos";
                 try
                 {
-                    intDummy= Int32.Parse(changeItSupplierto.Text);
+                    intDummy = Int32.Parse(changeItSupplierto.Text);
+                    whatToEdit = "idDos";
+                    editContent = changeItSupplierto.Text;
+                    editID = editIdTextBox.Text;
+                    checker();
+                    SqliteDataAccess.items = SqliteDataAccess.loadItems();
                 }
-                catch
+               catch
                 {
                     pepegaWait();
                 }
-                editContent = changeItSupplierto.Text;
-                editID = editIdTextBox.Text;
-                checker();
-                SqliteDataAccess.items = SqliteDataAccess.loadItems();
             }
             else pepegaWait();
 
@@ -126,14 +155,7 @@ namespace magazyn_projekt
             }
             catch
             {
-                async Task pepegaWait()
-                {
-                    this.Title = "something wrong happened uwo, check your input";
-                    var t1 = Task.Delay(2000);
-                    await t1;
-                    this.Title = "Edit Item";
-
-                }
+               
                 pepegaWait();
 
             }
@@ -146,13 +168,7 @@ namespace magazyn_projekt
             this.Title = "Edit Item";
 
         }
-        private void prechecker()
-        {
-            if (editIdTextBox.Text == "")
-            {               
-                pepegaWait();
-            }
-        }
+
 
     }
 }
