@@ -36,31 +36,47 @@ namespace magazyn_projekt
 
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
-            whatToEdit = "userid";
-            editContent = editLoginTextBox.Text;
-            editID = editIdTextBox.Text;
-            checker();
-            users = loadUsers();
-            
-            
+            prechecker();
+            if(editLoginTextBox.Text!="")
+            {
+                whatToEdit = "userid";
+                editContent = editLoginTextBox.Text;
+                editID = editIdTextBox.Text;
+                checker();
+                users = loadUsers();
+
+            }
+            else pepegaWait();
+
+
         }
 
         private void editPasswordButton_Click(object sender, RoutedEventArgs e)
         {
-            whatToEdit = "password";
-            editContent = editPasswordTextBox.Text;
-            editID = editIdTextBox.Text;
-            checker();
-            users = loadUsers();
+            prechecker();
+            if (editPasswordTextBox.Text != "")
+            {
+                whatToEdit = "password";
+                editContent = editPasswordTextBox.Text;
+                editID = editIdTextBox.Text;
+                checker();
+                users = loadUsers();
+            }
+            else pepegaWait();
         }
 
         private void editStatusButton_Click(object sender, RoutedEventArgs e)
         {
-            whatToEdit = "status";
-            editContent = editStatusTextBox.Text;
-            editID = editIdTextBox.Text;
-            checker();
-            users = loadUsers();
+            prechecker();
+            if (editStatusTextBox.Text != "")
+            {
+                whatToEdit = "status";
+                editContent = editStatusTextBox.Text;
+                editID = editIdTextBox.Text;
+                checker();
+                users = loadUsers();
+            }
+            else pepegaWait();
         }
         private void checker()
         {
@@ -85,6 +101,7 @@ namespace magazyn_projekt
 
         private void editFnameButton_Click(object sender, RoutedEventArgs e)
         {
+            prechecker();
             whatToEdit = "firstname";
             editContent = editFnameTextBox.Text;
             editID = editIdTextBox.Text;
@@ -94,11 +111,28 @@ namespace magazyn_projekt
 
         private void editLnameButton_Click(object sender, RoutedEventArgs e)
         {
+            prechecker();
             whatToEdit = "lastname";
-            editContent = editFnameTextBox.Text;
+            editContent = editLnameTextBox.Text;
             editID = editIdTextBox.Text;
             checker();
             users = loadUsers();
+        }
+
+        async Task pepegaWait()
+        {
+            this.Title = "something wrong happened uwo, check your input";
+            var t1 = Task.Delay(2000);
+            await t1;
+            this.Title = "Edit User";
+
+        }
+        void prechecker()
+        {
+            if(editIdTextBox.Text=="")
+            {
+                pepegaWait();
+            }
         }
     }
 }
