@@ -22,6 +22,8 @@ namespace magazyn_projekt
         public static string whatToEdit;
         public static string editContent;
         public static string editID;
+        int intDummy;
+        float floatDummy;
         public editItemPopup()
         {
             InitializeComponent();
@@ -29,47 +31,115 @@ namespace magazyn_projekt
 
         private void changeItNameBtn_Click(object sender, RoutedEventArgs e)
         {
-            whatToEdit = "nazwaTow";
-            editContent = changeItNameTextBox.Text;
-            editID = editIdTextBox.Text;
-            checker();
-            SqliteDataAccess.items = SqliteDataAccess.loadItems();
+            if(changeItNameTextBox.Text!= "" && editIdTextBox.Text != "")
+            {
+                try
+                {
+                    whatToEdit = "nazwaTow";
+                    editContent = changeItNameTextBox.Text;
+                    editID = editIdTextBox.Text;
+                    checker();
+                    SqliteDataAccess.items = SqliteDataAccess.loadItems();
+
+                }
+                catch
+                {
+                    pepegaWait();
+                }
+
+            }
+            else pepegaWait();
+
         }
 
         private void changeItSPriceBtn_Click(object sender, RoutedEventArgs e)
         {
-            whatToEdit = "cenaSprz";
-            editContent = changeItSPriceTo.Text;
-            editID = editIdTextBox.Text;
-            checker();
-            SqliteDataAccess.items = SqliteDataAccess.loadItems();
+            if(changeItSPriceTo.Text!= "" && editIdTextBox.Text != "")
+            {
+                try
+                {
+                    floatDummy = float.Parse(changeItSPriceTo.Text.Replace(",", "."));
+                    whatToEdit = "cenaSprz";
+                    editContent = changeItSPriceTo.Text.Replace(",", ".");
+                    editID = editIdTextBox.Text;
+                    checker();
+                    SqliteDataAccess.items = SqliteDataAccess.loadItems();
+                }
+                catch
+                {
+                    pepegaWait();
+                }
+
+            }
+            else pepegaWait();
+
         }
 
         private void changeItBPriceBtn_Click(object sender, RoutedEventArgs e)
         {
-            whatToEdit = "cenaZak";
-            editContent = changeItBPriceTo.Text;
-            editID = editIdTextBox.Text;
-            checker();
-            SqliteDataAccess.items = SqliteDataAccess.loadItems();
+            if(changeItBPriceTo.Text!= "" && editIdTextBox.Text != "")
+            {
+                try
+                {
+                    floatDummy = float.Parse(changeItBPriceTo.Text.Replace(",", "."));
+                    whatToEdit = "cenaZak";
+                    editContent = changeItBPriceTo.Text.Replace(",", ".");
+                    editID = editIdTextBox.Text;
+                    checker();
+                    SqliteDataAccess.items = SqliteDataAccess.loadItems();
+                }
+                catch
+                {
+                    pepegaWait();
+                }
+            }
+            else pepegaWait();
+
         }
 
         private void changeItQtyBtn_Click(object sender, RoutedEventArgs e)
         {
-            whatToEdit = "ilosc";
-            editContent = changeItQuantityTo.Text;
-            editID = editIdTextBox.Text;
-            checker();
-            SqliteDataAccess.items = SqliteDataAccess.loadItems();
+            if (changeItQuantityTo.Text != "" && editIdTextBox.Text != "")
+            {
+                try
+                {
+                    intDummy = Int32.Parse(changeItQuantityTo.Text);
+                    whatToEdit = "ilosc";
+                    editContent = changeItQuantityTo.Text;
+                    editID = editIdTextBox.Text;
+                    checker();
+                    SqliteDataAccess.items = SqliteDataAccess.loadItems();
+                }
+                catch
+                {
+
+                }
+            }
+            else pepegaWait();
+            
         }
 
         private void changeItSupplierBtn_Click(object sender, RoutedEventArgs e)
         {
-            whatToEdit = "idDos";
-            editContent = changeItSupplierto.Text;
-            editID = editIdTextBox.Text;
-            checker();
-            SqliteDataAccess.items = SqliteDataAccess.loadItems();
+
+            if(changeItSupplierto.Text!="" && editIdTextBox.Text != "")
+            {
+                try
+                {
+                    intDummy = Int32.Parse(changeItSupplierto.Text);
+                    whatToEdit = "idDos";
+                    editContent = changeItSupplierto.Text;
+                    editID = editIdTextBox.Text;
+                    checker();
+                    SqliteDataAccess.items = SqliteDataAccess.loadItems();
+                }
+               catch
+                {
+                    pepegaWait();
+                }
+            }
+            else pepegaWait();
+
         }
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
@@ -85,9 +155,20 @@ namespace magazyn_projekt
             }
             catch
             {
-                this.Title = "something wrong happened uwo, check your input";
-                Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
+               
+                pepegaWait();
+
             }
         }
+        async Task pepegaWait()
+        {
+            this.Title = "something wrong happened uwo, check your input";
+            var t1 = Task.Delay(2000);
+            await t1;
+            this.Title = "Edit Item";
+
+        }
+
+
     }
 }

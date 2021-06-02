@@ -86,7 +86,7 @@ namespace magazyn_projekt
 
         public static void deleteItems()
         {
-            string removecommand = "delete from items where id='" + deleteItemPopup.removeItID + "'";
+            string removecommand = "delete from items where idTow='" + deleteItemPopup.removeItID + "'";
             using (IDbConnection cnn = new SQLiteConnection(loadConnectionString()))
             {
 

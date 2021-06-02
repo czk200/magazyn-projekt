@@ -30,15 +30,19 @@ namespace magazyn_projekt
         {
             InitializeComponent();
             dataGrid1.ItemsSource = observableUsers;
-            if (loginWindow.userLevel != "3" && loginWindow.userLevel != "2")
+            if (loginWindow.userLevel != "3")
             {
                 editUserButton.IsEnabled = false;
                 removeButton.IsEnabled = false;
             }
+            if(loginWindow.userLevel != "2" && loginWindow.userLevel!="3")
+            {
+                addUserButton.IsEnabled = false;
+            }
             InitTimer();
-           
+
         }
-        
+
         private void backButtonClick(object sender, RoutedEventArgs e)
         {
             MainWindow mW = new MainWindow();
@@ -81,8 +85,22 @@ namespace magazyn_projekt
             dataGrid1.ItemsSource = null;
             if (searchBar.Text != "")
             {
-                var filter = users.Where(userModel => userModel.userid.StartsWith(searchBar.Text));
-                dataGrid1.ItemsSource = filter;
+                if (comboBox.SelectedValue.ToString() == "Id")
+                {
+                    var filter = users.Where(userModel => userModel.id.ToString().StartsWith(searchBar.Text));
+                    dataGrid1.ItemsSource = filter;
+                }
+                else if (comboBox.SelectedValue.ToString() == "Status")
+                {
+                    var filter = users.Where(userModel => userModel.status.ToString().StartsWith(searchBar.Text));
+                    dataGrid1.ItemsSource = filter;
+                }
+                else if (comboBox.SelectedValue.ToString() == "Login")
+                {
+                    var filter = users.Where(userModel => userModel.userid.StartsWith(searchBar.Text));
+                    dataGrid1.ItemsSource = filter;
+                }
+
             }
             else
             {
@@ -94,6 +112,10 @@ namespace magazyn_projekt
         {
             editUserPopup edUsPop = new editUserPopup();
             edUsPop.Show();
+        }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
         }
     }
 }

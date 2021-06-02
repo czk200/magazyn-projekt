@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:magazyn_projekt"
         mc:Ignorable="d"
-        Title="editUserPopup" Height="116" Width="360">
+        Title="Edit User" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
     <Grid Background="LightGray" HorizontalAlignment="Center" Width="360">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="180" />
@@ -13,6 +13,8 @@
             <ColumnDefinition Width="90" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
@@ -25,11 +27,31 @@
         <Label Grid.Row="2" Grid.Column="0" Content="Change password to" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <TextBox Grid.Row="2" Grid.Column="1" x:Name="editPasswordTextBox" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" Width="90" Height="25" />
         <Label Grid.Row="3" Grid.Column="0" Content="Change status to" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox Grid.Row="3" Grid.Column="1" x:Name="editStatusTextBox" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" Width="90" Height="25" />
+        <Label Grid.Row="4" Grid.Column="0" Content="Change First name to" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Row="5" Grid.Column="0" Content="Change Last name to" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="editFnameTextBox" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" Width="90" Height="25" />
+        <TextBox Grid.Row="5" Grid.Column="1" x:Name="editLnameTextBox" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" Width="90" Height="25" />
         <Button Grid.Row="1" Grid.Column="2" x:Name="editLoginButton" Content="Edit" HorizontalAlignment="Left" VerticalAlignment="Top" Click="editButton_Click" Width="90" Height="25"/>
         <Button Grid.Row="0" Grid.Column="2" Content="back to menu" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click" Width="90" Height="25"/>
         <Button Grid.Row="2" Grid.Column="2" x:Name="editPasswordButton" Content="edit" HorizontalAlignment="Left" VerticalAlignment="Top" Click="editPasswordButton_Click" Width="90" Height="25"/>
         <Button Grid.Row="3" Grid.Column="2" x:Name="editStatusButton" Content="edit" HorizontalAlignment="Left" VerticalAlignment="Top" Click="editStatusButton_Click" Width="90" Height="25"/>
+        <Button Grid.Row="5" Grid.Column="2" x:Name="editLnameButton" Content="edit" HorizontalAlignment="Left" VerticalAlignment="Top" Click="editLnameButton_Click" Width="90" Height="25"/>
+        <Button Grid.Row="4" Grid.Column="2" x:Name="editFnameButton" Content="edit" HorizontalAlignment="Left" VerticalAlignment="Top" Click="editFnameButton_Click" Width="90" Height="25"/>
+        <ComboBox SelectedIndex="0" Grid.Row="3" Grid.Column="1" Name="ComboBox" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="90" Height="25">
+            <ComboBoxItem>
+                0
+            </ComboBoxItem>
+            <ComboBoxItem>
+                1
+            </ComboBoxItem>
+            <ComboBoxItem>
+                2
+            </ComboBoxItem>
+            <ComboBoxItem>
+                3
+            </ComboBoxItem>
+        </ComboBox>
 
     </Grid>
 </Window>

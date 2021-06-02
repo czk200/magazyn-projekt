@@ -36,33 +36,46 @@ namespace magazyn_projekt
 
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
-            whatToEdit = "userid";
-            editContent = editLoginTextBox.Text;
-            editID = editIdTextBox.Text;
-            checker();
-            users = loadUsers();
-            
-            
+
+            if(editLoginTextBox.Text!="" && editIdTextBox.Text!="")
+            {
+                whatToEdit = "userid";
+                editContent = editLoginTextBox.Text;
+                editID = editIdTextBox.Text;
+                checker();
+                users = loadUsers();
+
+            }
+            else pepegaWait();
+
+
         }
 
         private void editPasswordButton_Click(object sender, RoutedEventArgs e)
         {
-            whatToEdit = "password";
-            editContent = editPasswordTextBox.Text;
-            editID = editIdTextBox.Text;
-            checker();
-            users = loadUsers();
+            prechecker();
+            if (editPasswordTextBox.Text != "" && editIdTextBox.Text != "")
+            {
+                whatToEdit = "password";
+                editContent = editPasswordTextBox.Text;
+                editID = editIdTextBox.Text;
+                checker();
+                users = loadUsers();
+            }
+            else pepegaWait();
         }
 
         private void editStatusButton_Click(object sender, RoutedEventArgs e)
         {
-            whatToEdit = "status";
-            editContent = editStatusTextBox.Text;
-            editID = editIdTextBox.Text;
-            checker();
-            users = loadUsers();
-        }
+            prechecker();
+            
+                whatToEdit = "status";
+                editContent = ComboBox.SelectedIndex.ToString();
+                editID = editIdTextBox.Text;
+                checker();
+                users = loadUsers();
 
+        }
         private void checker()
         {
             try
@@ -71,8 +84,57 @@ namespace magazyn_projekt
             }
             catch
             {
-                this.Title = "something wrong happened uwo, check your input";
-                Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
+                async Task pepegaWait()
+                {
+                    this.Title = "something wrong happened uwo, check your input";
+                    var t1 = Task.Delay(2000);
+                    await t1;
+                    this.Title = "Edit User";
+
+                }
+                pepegaWait();
+
+            }
+        }
+
+        private void editFnameButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (editIdTextBox.Text != "")
+            {
+                whatToEdit = "firstname";
+                editContent = editFnameTextBox.Text;
+                editID = editIdTextBox.Text;
+                checker();
+                users = loadUsers();
+            }
+        }
+
+        private void editLnameButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (editIdTextBox.Text != "")
+            {
+                prechecker();
+                whatToEdit = "lastname";
+                editContent = editLnameTextBox.Text;
+                editID = editIdTextBox.Text;
+                checker();
+                users = loadUsers();
+            }
+        }
+
+        async Task pepegaWait()
+        {
+            this.Title = "something wrong happened uwo, check your input";
+            var t1 = Task.Delay(2000);
+            await t1;
+            this.Title = "Edit User";
+
+        }
+        void prechecker()
+        {
+            if(editIdTextBox.Text=="")
+            {
+                pepegaWait();
             }
         }
     }

@@ -30,36 +30,39 @@ namespace magazyn_projekt
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             userModel p = new userModel();
-            if (useridTextBox.Text != "") p.userid = useridTextBox.Text;
-            if (userpasswordTextBox.Text != "") p.password = userpasswordTextBox.Text;
-            if (userstatusTextBox.Text != "")
-                if (userstatusTextBox.Text != "")
-                {
-                    if (loginWindow.userLevel == "2" && userstatusTextBox.Text != "1")
+            if (loginWindow.userLevel == "2" && ComboBox.SelectedItem != "1")
                     {
                         this.Title = "manager can only add workers, correct your input please";
                     }
-                    else
+            else
                     {
-                        p.status = userstatusTextBox.Text;
+                        p.status = ComboBox.SelectedIndex.ToString();
+                        if (useridTextBox.Text != "") p.userid = useridTextBox.Text;
+                        if (userpasswordTextBox.Text != "") p.password = userpasswordTextBox.Text;
+                try
+                {
+                    SqliteDataAccess.saveUsers(p);
+                }
+                catch
+                {
+                    pepegaWait();
+                }
+
                     }
 
-                }
-            try
-            {
-                SqliteDataAccess.saveUsers(p);
-            }
-            catch
-            {
-                this.Title = "something wrong happened uwo, check your input (given login might be already in use)";
-                Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
-            }
+                           
             useridTextBox.Text = "";
             userpasswordTextBox.Text = "";
-            userstatusTextBox.Text = "";
             users = SqliteDataAccess.loadUsers();
         }
-           
+        async Task pepegaWait()
+        {
+            this.Title = "something wrong happened uwo, check your input";
+            var t1 = Task.Delay(2000);
+            await t1;
+            this.Title = "Delete Item";
+
+        }
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {

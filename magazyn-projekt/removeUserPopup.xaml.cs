@@ -30,17 +30,21 @@ namespace magazyn_projekt
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            removeId = removeidTexbox.Text;
-            try
+            if(removeidTexbox.Text!="1")
             {
-                SqliteDataAccess.deleteUsers();
+                removeId = removeidTexbox.Text;
+                try
+                {
+                    SqliteDataAccess.deleteUsers();
+                }
+                catch
+                {
+                    this.Title = "something wrong happened uwo, check your input";
+                    Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
+                }
+                users = SqliteDataAccess.loadUsers();
             }
-            catch
-            {
-                this.Title = "something wrong happened uwo, check your input";
-                Task.Delay(2000).ContinueWith(t => this.Title = "Add Item");
-            }
-            users = SqliteDataAccess.loadUsers();
+            
         }
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)

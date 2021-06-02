@@ -15,30 +15,46 @@ namespace magazyn_projekt
         {
             InitializeComponent();
         }
+        async Task pepegaWait()
+        {
+            this.Title = "something wrong happened uwo, check your input";
+            var t1 = Task.Delay(2000);
+            await t1;
+            this.Title = "Add Item";
 
+        }
         private void addItemButton_Click(object sender, RoutedEventArgs e)
         {
             itemModel p = new itemModel();
-            if (supplierIdTextBox.Text != "") p.idDos = Int32.Parse(supplierIdTextBox.Text);
-            if (itemQuantityTextBox.Text != "") p.ilosc = Int32.Parse(itemQuantityTextBox.Text);
-            if (itemNameTextBox.Text != "") p.nazwaTow = itemNameTextBox.Text;
-            if (buyingPriceTextBox.Text != "") p.cenaZak = float.Parse(buyingPriceTextBox.Text);
-            if (sellingPriceTextBox.Text != "") p.cenaSprz = float.Parse(sellingPriceTextBox.Text);
             try
             {
+                if (supplierIdTextBox.Text != "") p.idDos = Int32.Parse(supplierIdTextBox.Text); else pepegaWait();
+                if (itemQuantityTextBox.Text != "") p.ilosc = Int32.Parse(itemQuantityTextBox.Text); else pepegaWait();
+                if (itemNameTextBox.Text != "") p.nazwaTow = itemNameTextBox.Text; else pepegaWait();
+                if (buyingPriceTextBox.Text != "") p.cenaZak = float.Parse(buyingPriceTextBox.Text.Replace(",", ".")); else pepegaWait();
+                if (sellingPriceTextBox.Text != "") p.cenaSprz = float.Parse(sellingPriceTextBox.Text.Replace(",", ".")); else pepegaWait();
                 SqliteDataAccess.addItem(p);
+
             }
             catch
             {
-                this.Title = "something wrong happened uwo, check your input";
-                Task.Delay(2000).ContinueWith(t=>this.Title = "Add Item");
+
+                pepegaWait();
+
             }
+            
+            
             supplierIdTextBox.Text = "";
             itemQuantityTextBox.Text = "";
             itemNameTextBox.Text = "";
             sellingPriceTextBox.Text = "";
             buyingPriceTextBox.Text = "";
             items = SqliteDataAccess.loadItems();
+        }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
         }
     }
 }
