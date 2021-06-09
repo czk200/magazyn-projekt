@@ -28,22 +28,23 @@ namespace magazyn_projekt
             itemModel p = new itemModel();
             try
             {
-                if (supplierIdTextBox.Text != "") p.idDos = Int32.Parse(supplierIdTextBox.Text); else pepegaWait();
-                if (itemQuantityTextBox.Text != "") p.ilosc = Int32.Parse(itemQuantityTextBox.Text); else pepegaWait();
-                if (itemNameTextBox.Text != "") p.nazwaTow = itemNameTextBox.Text; else pepegaWait();
-                if (buyingPriceTextBox.Text != "") p.cenaZak = float.Parse(buyingPriceTextBox.Text.Replace(",", ".")); else pepegaWait();
-                if (sellingPriceTextBox.Text != "") p.cenaSprz = float.Parse(sellingPriceTextBox.Text.Replace(",", ".")); else pepegaWait();
+                if (itemNameTextBox.Text != "") p.nazwaTow = itemNameTextBox.Text;
+                if (supplierIdTextBox.Text != "") p.idDos = Int32.Parse(supplierIdTextBox.Text);
+                if (itemQuantityTextBox.Text != "") p.ilosc = Int32.Parse(itemQuantityTextBox.Text);
+                if (buyingPriceTextBox.Text != "") p.cenaZak = float.Parse(buyingPriceTextBox.Text);
+                if (sellingPriceTextBox.Text != "") p.cenaSprz = float.Parse(sellingPriceTextBox.Text);
                 SqliteDataAccess.addItem(p);
 
             }
+
             catch
             {
 
                 pepegaWait();
 
             }
-            
-            
+
+
             supplierIdTextBox.Text = "";
             itemQuantityTextBox.Text = "";
             itemNameTextBox.Text = "";

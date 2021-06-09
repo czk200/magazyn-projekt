@@ -58,7 +58,7 @@ namespace magazyn_projekt
             {
                 try
                 {
-                    floatDummy = float.Parse(changeItSPriceTo.Text.Replace(",", "."));
+
                     whatToEdit = "cenaSprz";
                     editContent = changeItSPriceTo.Text.Replace(",", ".");
                     editID = editIdTextBox.Text;
@@ -81,7 +81,6 @@ namespace magazyn_projekt
             {
                 try
                 {
-                    floatDummy = float.Parse(changeItBPriceTo.Text.Replace(",", "."));
                     whatToEdit = "cenaZak";
                     editContent = changeItBPriceTo.Text.Replace(",", ".");
                     editID = editIdTextBox.Text;
@@ -112,7 +111,7 @@ namespace magazyn_projekt
                 }
                 catch
                 {
-
+                    pepegaWait();
                 }
             }
             else pepegaWait();
